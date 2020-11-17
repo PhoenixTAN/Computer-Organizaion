@@ -1,0 +1,141 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+10
+837
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+multiplicationALU_1bit_true_format
+# storage
+db|multiplicationALU_1bit_true_format.(0).cnf
+db|multiplicationALU_1bit_true_format.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+multiplicationALU_1bit_true_format.vhd
+24af7bd0cce26474511d21e09badcd8d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+multiplicationALU_1bit_true_format:inst1
+}
+# lmf
+..|..|q|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+Experiment2Test1
+# storage
+db|multiplicationALU_1bit_true_format.(3).cnf
+db|multiplicationALU_1bit_true_format.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+Experiment2Test1.vhd
+0256e59a133753c1e6dd92905d9382
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Experiment2Test1:inst
+}
+# lmf
+..|..|q|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+TopLevelEntityExp3
+# storage
+db|multiplicationALU_1bit_true_format.(1).cnf
+db|multiplicationALU_1bit_true_format.(1).cnf
+# case_insensitive
+# source_file
+TopLevelEntityExp3.bdf
+6c9a8d76157bd49a690ab512fb7cdee
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+My4x4MUX
+# storage
+db|multiplicationALU_1bit_true_format.(2).cnf
+db|multiplicationALU_1bit_true_format.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+My4x4MUX.vhd
+347a80f9a826e9569b35e432ecd23ee
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+My4x4MUX:inst9
+}
+# lmf
+..|..|q|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+

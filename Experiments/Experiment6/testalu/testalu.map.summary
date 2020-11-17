@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Nov 22 02:46:29 2017
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
+Revision Name : testalu
+Top-level Entity Name : TESTALU
+Family : Cyclone III
+Total logic elements : 9
+    Total combinational functions : 8
+    Dedicated logic registers : 9
+Total registers : 9
+Total pins : 26
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,22 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0xfffffffffc4b5ad9:
+	0x0045934e: quartus + 0x5934e (Pjm_Uninit + 0x4a10e)
+	0x72ae2465: MSVCR90 + 0x22465 (exit + 0x10)
+	0x0044f443: quartus + 0x4f443 (Pjm_Uninit + 0x40203)
+	0x75ad8743: KERNEL32 + 0x18743 (BaseThreadInitThunk + 0x23)
+	0x76fb582c: ntdll + 0x6582c (RtlGetAppContainerNamedObjectPath + 0xfc)
+	0x76fb57fc: ntdll + 0x657fc (RtlGetAppContainerNamedObjectPath + 0xcc)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Access Violation at 0XFC4B5AD9</error>
+	<date>Wed Nov 22 07:59:52 2017</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0XFC4B5AD9
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+

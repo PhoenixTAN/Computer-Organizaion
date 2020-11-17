@@ -1,0 +1,103 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+10
+837
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Adder_4
+# storage
+db|Adder_4.(0).cnf
+db|Adder_4.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+Adder_4.vhd
+879c536a1349b72489cc30d199872ce9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Full_Adder4:inst|Adder_4:inst
+Full_Adder4:inst|Adder_4:inst1
+Full_Adder4:inst|Adder_4:inst2
+Full_Adder4:inst|Adder_4:inst3
+Full_Adder4:inst1|Adder_4:inst
+Full_Adder4:inst1|Adder_4:inst1
+Full_Adder4:inst1|Adder_4:inst2
+Full_Adder4:inst1|Adder_4:inst3
+}
+# lmf
+..|..|q|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+Full_Adder4
+# storage
+db|Adder_4.(1).cnf
+db|Adder_4.(1).cnf
+# case_insensitive
+# source_file
+Full_Adder4.bdf
+e9a1e35b2bbe8f2c6d4531fec7c760
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Full_Adder4:inst
+Full_Adder4:inst1
+}
+# macro_sequence
+
+# end
+# entity
+Full_Adder8
+# storage
+db|Adder_4.(2).cnf
+db|Adder_4.(2).cnf
+# case_insensitive
+# source_file
+Full_Adder8.bdf
+36752d530624da3732b5110605239d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

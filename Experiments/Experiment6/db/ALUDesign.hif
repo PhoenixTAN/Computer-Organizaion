@@ -1,0 +1,207 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+10
+837
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+MyALU2
+# storage
+db|ALUDesign.(1).cnf
+db|ALUDesign.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+MyALU2.vhd
+314ce7e048d357565b2d862fb6293f0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+MyALU2:inst3
+}
+# lmf
+..|..|q|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+SupplementaryModule
+# storage
+db|ALUDesign.(2).cnf
+db|ALUDesign.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+SupplementaryModule.vhd
+38052ba5d44d5882b294887f6cabce
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+SupplementaryModule:inst5
+}
+# lmf
+..|..|q|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+My8x4MUX
+# storage
+db|ALUDesign.(3).cnf
+db|ALUDesign.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+My8x4MUX.vhd
+bea83f1d65c4f34cd4576446598a5645
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+My8x4MUX:inst1
+}
+# lmf
+..|..|q|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+CPURegister
+# storage
+db|ALUDesign.(4).cnf
+db|ALUDesign.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+CPURegister.vhd
+9954c8c74ef7fc12da2dedf38de09d35
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+CPURegister:inst4
+}
+# lmf
+..|..|q|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+MyLED
+# storage
+db|ALUDesign.(5).cnf
+db|ALUDesign.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+MyLED.vhd
+19706052d69519574c233aeaca5d787a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+MyLED:inst
+}
+# lmf
+..|..|q|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+ALUDesignTopLevelEntity
+# storage
+db|ALUDesign.(0).cnf
+db|ALUDesign.(0).cnf
+# case_insensitive
+# source_file
+ALUDesignTopLevelEntity.bdf
+22bc8bd44373d64039b1da8ce9d43567
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

@@ -1,0 +1,37 @@
+|testalu
+CLK => Sel.CLK
+CLK => S[7]~reg0.CLK
+CLK => S[6]~reg0.CLK
+CLK => S[5]~reg0.CLK
+CLK => S[4]~reg0.CLK
+CLK => S[3]~reg0.CLK
+CLK => S[2]~reg0.CLK
+CLK => S[1]~reg0.CLK
+CLK => S[0]~reg0.CLK
+Sout => Sel.DATAIN
+input[0] => S~15.DATAB
+input[1] => S~14.DATAB
+input[2] => S~13.DATAB
+input[3] => S~12.DATAB
+input[4] => S~11.DATAB
+input[5] => S~10.DATAB
+input[6] => S~9.DATAB
+input[7] => S~8.DATAB
+input[8] => S~7.DATAB
+input[9] => S~6.DATAB
+input[10] => S~5.DATAB
+input[11] => S~4.DATAB
+input[12] => S~3.DATAB
+input[13] => S~2.DATAB
+input[14] => S~1.DATAB
+input[15] => S~0.DATAB
+S[0] <= S[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= S[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= S[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= S[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= S[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

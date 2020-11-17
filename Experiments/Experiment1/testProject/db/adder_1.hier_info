@@ -1,0 +1,8 @@
+|adder_1
+Ain => Add0.IN1
+Bin => Add0.IN2
+Cin => Add1.IN4
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+

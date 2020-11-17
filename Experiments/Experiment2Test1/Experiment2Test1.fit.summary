@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Oct 25 21:30:20 2017
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : Experiment2Test1
+Top-level Entity Name : Experiment2Test1
+Family : Cyclone III
+Device : EP3C40F780C8
+Timing Models : Final
+Total logic elements : 437 / 39,600 ( 1 % )
+    Total combinational functions : 435 / 39,600 ( 1 % )
+    Dedicated logic registers : 171 / 39,600 ( < 1 % )
+Total registers : 171
+Total pins : 23 / 536 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,161,216 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 252 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,694 @@
+Analysis & Synthesis report for ISA
+Wed Dec 06 00:05:13 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Source assignments for lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated
+ 10. Parameter Settings for User Entity Instance: lpm_rom0:inst26|altsyncram:altsyncram_component
+ 11. altsyncram Parameter Settings by Entity Instance
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 06 00:05:13 2017    ;
+; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name                      ; ISA                                      ;
+; Top-level Entity Name              ; TopLevelEntity                           ;
+; Family                             ; Cyclone III                              ;
+; Total logic elements               ; 51                                       ;
+;     Total combinational functions  ; 48                                       ;
+;     Dedicated logic registers      ; 38                                       ;
+; Total registers                    ; 38                                       ;
+; Total pins                         ; 18                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP3C40F780C8       ;                    ;
+; Top-level entity name                                          ; TopLevelEntity     ; ISA                ;
+; Family name                                                    ; Cyclone III        ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; DSP Block Balancing                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto DSP Block Replacement                                     ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Timing-Driven Synthesis                                        ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                    ; Off                ; Off                ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; SDC constraint protection                                      ; Off                ; Off                ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                           ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+
+; CPURegisterBlock.vhd             ; yes             ; User VHDL File                     ; E:/Computer Organization Experiment/Experiment8/CPURegisterBlock.vhd   ;
+; ALU.vhd                          ; yes             ; User VHDL File                     ; E:/Computer Organization Experiment/Experiment8/ALU.vhd                ;
+; TopLevelEntity.bdf               ; yes             ; User Block Diagram/Schematic File  ; E:/Computer Organization Experiment/Experiment8/TopLevelEntity.bdf     ;
+; IO.vhd                           ; yes             ; User VHDL File                     ; E:/Computer Organization Experiment/Experiment8/IO.vhd                 ;
+; My16x8MUX.vhd                    ; yes             ; User VHDL File                     ; E:/Computer Organization Experiment/Experiment8/My16x8MUX.vhd          ;
+; Controller.vhd                   ; yes             ; User VHDL File                     ; E:/Computer Organization Experiment/Experiment8/Controller.vhd         ;
+; lpm_rom0.v                       ; yes             ; User Wizard-Generated File         ; E:/Computer Organization Experiment/Experiment8/lpm_rom0.v             ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; e:/q/quartus/libraries/megafunctions/altsyncram.tdf                    ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; e:/q/quartus/libraries/megafunctions/stratix_ram_block.inc             ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; e:/q/quartus/libraries/megafunctions/lpm_mux.inc                       ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; e:/q/quartus/libraries/megafunctions/lpm_decode.inc                    ;
+; aglobal90.inc                    ; yes             ; Megafunction                       ; e:/q/quartus/libraries/megafunctions/aglobal90.inc                     ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; e:/q/quartus/libraries/megafunctions/a_rdenreg.inc                     ;
+; altrom.inc                       ; yes             ; Megafunction                       ; e:/q/quartus/libraries/megafunctions/altrom.inc                        ;
+; altram.inc                       ; yes             ; Megafunction                       ; e:/q/quartus/libraries/megafunctions/altram.inc                        ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; e:/q/quartus/libraries/megafunctions/altdpram.inc                      ;
+; altqpram.inc                     ; yes             ; Megafunction                       ; e:/q/quartus/libraries/megafunctions/altqpram.inc                      ;
+; db/altsyncram_ei91.tdf           ; yes             ; Auto-Generated Megafunction        ; E:/Computer Organization Experiment/Experiment8/db/altsyncram_ei91.tdf ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 51        ;
+;                                             ;           ;
+; Total combinational functions               ; 48        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 11        ;
+;     -- 3 input functions                    ; 1         ;
+;     -- <=2 input functions                  ; 36        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 17        ;
+;     -- arithmetic mode                      ; 31        ;
+;                                             ;           ;
+; Total registers                             ; 38        ;
+;     -- Dedicated logic registers            ; 38        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 18        ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 38        ;
+; Total fan-out                               ; 218       ;
+; Average fan-out                             ; 1.79      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                             ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
+; |TopLevelEntity            ; 48 (0)            ; 38 (0)       ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |TopLevelEntity         ; work         ;
+;    |IO:inst|               ; 48 (48)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopLevelEntity|IO:inst ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                   ;
++---------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                               ; Reason for Removal                     ;
++---------------------------------------------------------------------------------------------+----------------------------------------+
+; lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|rden_a_store ; Lost fanout                            ;
+; IO:inst|LED7S[7]                                                                            ; Stuck at GND due to stuck port data_in ;
+; IO:inst|LED7S[0..5]                                                                         ; Stuck at VCC due to stuck port data_in ;
+; IO:inst|LED7S[6]                                                                            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 9                                                       ;                                        ;
++---------------------------------------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 38    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                      ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
++---------------------------------+--------------------+------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_rom0:inst26|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------+
+; Parameter Name                     ; Value                ; Type                             ;
++------------------------------------+----------------------+----------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                          ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                   ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                          ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                          ;
+; WIDTH_A                            ; 16                   ; Signed Integer                   ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                   ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                   ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                          ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                          ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                          ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                          ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                          ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                          ;
+; WIDTH_B                            ; 1                    ; Untyped                          ;
+; WIDTHAD_B                          ; 1                    ; Untyped                          ;
+; NUMWORDS_B                         ; 1                    ; Untyped                          ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                          ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                          ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                          ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                          ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                          ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                          ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                          ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                          ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                          ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                          ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                          ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                   ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                          ;
+; BYTE_SIZE                          ; 8                    ; Untyped                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
+; INIT_FILE                          ; mem.mif              ; Untyped                          ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                          ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                          ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                          ;
+; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                          ;
+; CBXI_PARAMETER                     ; altsyncram_ei91      ; Untyped                          ;
++------------------------------------+----------------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                            ;
++-------------------------------------------+-------------------------------------------------+
+; Name                                      ; Value                                           ;
++-------------------------------------------+-------------------------------------------------+
+; Number of entity instances                ; 1                                               ;
+; Entity Instance                           ; lpm_rom0:inst26|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                             ;
+;     -- WIDTH_A                            ; 16                                              ;
+;     -- NUMWORDS_A                         ; 256                                             ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                          ;
+;     -- WIDTH_B                            ; 1                                               ;
+;     -- NUMWORDS_B                         ; 1                                               ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                       ;
++-------------------------------------------+-------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Wed Dec 06 00:05:11 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ISA -c ISA
+Info: Found 2 design units, including 1 entities, in source file CPURegisterBlock.vhd
+    Info: Found design unit 1: CPURegister-MyCPURegister
+    Info: Found entity 1: CPURegister
+Info: Found 2 design units, including 1 entities, in source file ALU.vhd
+    Info: Found design unit 1: ALU-MyALU
+    Info: Found entity 1: ALU
+Info: Found 1 design units, including 1 entities, in source file TopLevelEntity.bdf
+    Info: Found entity 1: TopLevelEntity
+Info: Found 2 design units, including 1 entities, in source file IO.vhd
+    Info: Found design unit 1: IO-KDistribution
+    Info: Found entity 1: IO
+Info: Found 2 design units, including 1 entities, in source file My16x8MUX.vhd
+    Info: Found design unit 1: My16x8MUX-TEST
+    Info: Found entity 1: My16x8MUX
+Info: Found 2 design units, including 1 entities, in source file Controller.vhd
+    Info: Found design unit 1: Controller-MyController
+    Info: Found entity 1: Controller
+Info: Found 1 design units, including 1 entities, in source file lpm_rom0.v
+    Info: Found entity 1: lpm_rom0
+Info: Elaborating entity "TopLevelEntity" for the top level hierarchy
+Info: Elaborating entity "IO" for hierarchy "IO:inst"
+Warning (10541): VHDL Signal Declaration warning at IO.vhd(30): used implicit default value for signal "LED1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at IO.vhd(56): signal "S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at IO.vhd(60): signal "S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10034): Output port "CB[8]" at IO.vhd(41) has no driver
+Warning (10034): Output port "CB[7]" at IO.vhd(41) has no driver
+Warning (10034): Output port "CB[6]" at IO.vhd(41) has no driver
+Warning (10034): Output port "CB[4]" at IO.vhd(41) has no driver
+Warning (10034): Output port "CB[3]" at IO.vhd(41) has no driver
+Warning (10034): Output port "CB[2]" at IO.vhd(41) has no driver
+Warning (10034): Output port "CB[1]" at IO.vhd(41) has no driver
+Warning (10034): Output port "CB[0]" at IO.vhd(41) has no driver
+Info: Elaborating entity "Controller" for hierarchy "Controller:inst35"
+Warning (10492): VHDL Process Statement warning at Controller.vhd(91): signal "IRDATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "Reboot", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "RA", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "WT", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "RD", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "PCin", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "PCADC", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "PCSUB", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "PCRST", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "IRin", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "ALUControl", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "ALUCin", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "ALUWT", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "ALUSEL", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "ROMRead_Write", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "STATE", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "LEDSTATE", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controller.vhd(57): inferring latch(es) for signal or variable "DataSource", which holds its previous value in one or more paths through the process
+Warning (10034): Output port "LEDDATAOUT[31]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[30]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[29]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[28]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[27]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[26]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[25]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[24]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[23]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[22]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[21]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[20]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[19]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[18]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[17]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[16]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[15]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[14]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[13]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[12]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[11]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[10]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[9]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[8]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[7]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[6]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[5]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[4]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[3]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[2]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[1]" at Controller.vhd(42) has no driver
+Warning (10034): Output port "LEDDATAOUT[0]" at Controller.vhd(42) has no driver
+Info (10041): Inferred latch for "DataSource" at Controller.vhd(57)
+Info (10041): Inferred latch for "LEDSTATE[0]" at Controller.vhd(57)
+Info (10041): Inferred latch for "LEDSTATE[1]" at Controller.vhd(57)
+Info (10041): Inferred latch for "LEDSTATE[2]" at Controller.vhd(57)
+Info (10041): Inferred latch for "LEDSTATE[3]" at Controller.vhd(57)
+Info (10041): Inferred latch for "ROMRead_Write" at Controller.vhd(57)
+Info (10041): Inferred latch for "ALUSEL" at Controller.vhd(57)
+Info (10041): Inferred latch for "ALUWT" at Controller.vhd(57)
+Info (10041): Inferred latch for "ALUCin" at Controller.vhd(57)
+Info (10041): Inferred latch for "ALUControl[0]" at Controller.vhd(57)
+Info (10041): Inferred latch for "ALUControl[1]" at Controller.vhd(57)
+Info (10041): Inferred latch for "ALUControl[2]" at Controller.vhd(57)
+Info (10041): Inferred latch for "IRin" at Controller.vhd(57)
+Info (10041): Inferred latch for "PCRST" at Controller.vhd(57)
+Info (10041): Inferred latch for "PCSUB" at Controller.vhd(57)
+Info (10041): Inferred latch for "PCADC" at Controller.vhd(57)
+Info (10041): Inferred latch for "PCin" at Controller.vhd(57)
+Info (10041): Inferred latch for "RD" at Controller.vhd(57)
+Info (10041): Inferred latch for "WT" at Controller.vhd(57)
+Info (10041): Inferred latch for "RA[0]" at Controller.vhd(57)
+Info (10041): Inferred latch for "RA[1]" at Controller.vhd(57)
+Info (10041): Inferred latch for "Reboot" at Controller.vhd(57)
+Info (10041): Inferred latch for "P2:STATE[0]" at Controller.vhd(80)
+Info (10041): Inferred latch for "P2:STATE[1]" at Controller.vhd(80)
+Info: Elaborating entity "CPURegister" for hierarchy "CPURegister:inst34"
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(96): signal "M_Data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at CPURegisterBlock.vhd(73): inferring latch(es) for signal or variable "PC", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at CPURegisterBlock.vhd(73): inferring latch(es) for signal or variable "IRDATA", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(124): signal "DataSource" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(125): signal "ACC_Data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(127): signal "M_Data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(143): signal "DataSource" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(144): signal "ACC_Data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(146): signal "M_Data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(162): signal "DataSource" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(163): signal "ACC_Data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(165): signal "M_Data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(181): signal "DataSource" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(182): signal "ACC_Data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CPURegisterBlock.vhd(184): signal "M_Data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at CPURegisterBlock.vhd(107): inferring latch(es) for signal or variable "R0", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at CPURegisterBlock.vhd(107): inferring latch(es) for signal or variable "R1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at CPURegisterBlock.vhd(107): inferring latch(es) for signal or variable "R2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at CPURegisterBlock.vhd(107): inferring latch(es) for signal or variable "R3", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at CPURegisterBlock.vhd(107): inferring latch(es) for signal or variable "LEDOutput", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at CPURegisterBlock.vhd(107): inferring latch(es) for signal or variable "Data_TO_ALU", which holds its previous value in one or more paths through the process
+Warning (10034): Output port "M_Data_Out[7]" at CPURegisterBlock.vhd(26) has no driver
+Warning (10034): Output port "M_Data_Out[6]" at CPURegisterBlock.vhd(26) has no driver
+Warning (10034): Output port "M_Data_Out[5]" at CPURegisterBlock.vhd(26) has no driver
+Warning (10034): Output port "M_Data_Out[4]" at CPURegisterBlock.vhd(26) has no driver
+Warning (10034): Output port "M_Data_Out[3]" at CPURegisterBlock.vhd(26) has no driver
+Warning (10034): Output port "M_Data_Out[2]" at CPURegisterBlock.vhd(26) has no driver
+Warning (10034): Output port "M_Data_Out[1]" at CPURegisterBlock.vhd(26) has no driver
+Warning (10034): Output port "M_Data_Out[0]" at CPURegisterBlock.vhd(26) has no driver
+Warning (10034): Output port "PSWDATA[15]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[14]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[13]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[12]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[11]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[10]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[9]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[8]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[7]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[6]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[5]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[4]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[3]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[2]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[1]" at CPURegisterBlock.vhd(30) has no driver
+Warning (10034): Output port "PSWDATA[0]" at CPURegisterBlock.vhd(30) has no driver
+Info (10041): Inferred latch for "Data_TO_ALU[0]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "Data_TO_ALU[1]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "Data_TO_ALU[2]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "Data_TO_ALU[3]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "Data_TO_ALU[4]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "Data_TO_ALU[5]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "Data_TO_ALU[6]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "Data_TO_ALU[7]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[0]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[1]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[2]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[3]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[4]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[5]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[6]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[7]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[8]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[9]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[10]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[11]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[12]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[13]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[14]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[15]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[16]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[17]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[18]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[19]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[20]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[21]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[22]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[23]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[24]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[25]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[26]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[27]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[28]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[29]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[30]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "LEDOutput[31]" at CPURegisterBlock.vhd(107)
+Info (10041): Inferred latch for "R3[0]" at CPURegisterBlock.vhd(178)
+Info (10041): Inferred latch for "R3[1]" at CPURegisterBlock.vhd(178)
+Info (10041): Inferred latch for "R3[2]" at CPURegisterBlock.vhd(178)
+Info (10041): Inferred latch for "R3[3]" at CPURegisterBlock.vhd(178)
+Info (10041): Inferred latch for "R3[4]" at CPURegisterBlock.vhd(178)
+Info (10041): Inferred latch for "R3[5]" at CPURegisterBlock.vhd(178)
+Info (10041): Inferred latch for "R3[6]" at CPURegisterBlock.vhd(178)
+Info (10041): Inferred latch for "R3[7]" at CPURegisterBlock.vhd(178)
+Info (10041): Inferred latch for "R2[0]" at CPURegisterBlock.vhd(159)
+Info (10041): Inferred latch for "R2[1]" at CPURegisterBlock.vhd(159)
+Info (10041): Inferred latch for "R2[2]" at CPURegisterBlock.vhd(159)
+Info (10041): Inferred latch for "R2[3]" at CPURegisterBlock.vhd(159)
+Info (10041): Inferred latch for "R2[4]" at CPURegisterBlock.vhd(159)
+Info (10041): Inferred latch for "R2[5]" at CPURegisterBlock.vhd(159)
+Info (10041): Inferred latch for "R2[6]" at CPURegisterBlock.vhd(159)
+Info (10041): Inferred latch for "R2[7]" at CPURegisterBlock.vhd(159)
+Info (10041): Inferred latch for "R1[0]" at CPURegisterBlock.vhd(140)
+Info (10041): Inferred latch for "R1[1]" at CPURegisterBlock.vhd(140)
+Info (10041): Inferred latch for "R1[2]" at CPURegisterBlock.vhd(140)
+Info (10041): Inferred latch for "R1[3]" at CPURegisterBlock.vhd(140)
+Info (10041): Inferred latch for "R1[4]" at CPURegisterBlock.vhd(140)
+Info (10041): Inferred latch for "R1[5]" at CPURegisterBlock.vhd(140)
+Info (10041): Inferred latch for "R1[6]" at CPURegisterBlock.vhd(140)
+Info (10041): Inferred latch for "R1[7]" at CPURegisterBlock.vhd(140)
+Info (10041): Inferred latch for "R0[0]" at CPURegisterBlock.vhd(122)
+Info (10041): Inferred latch for "R0[1]" at CPURegisterBlock.vhd(122)
+Info (10041): Inferred latch for "R0[2]" at CPURegisterBlock.vhd(122)
+Info (10041): Inferred latch for "R0[3]" at CPURegisterBlock.vhd(122)
+Info (10041): Inferred latch for "R0[4]" at CPURegisterBlock.vhd(122)
+Info (10041): Inferred latch for "R0[5]" at CPURegisterBlock.vhd(122)
+Info (10041): Inferred latch for "R0[6]" at CPURegisterBlock.vhd(122)
+Info (10041): Inferred latch for "R0[7]" at CPURegisterBlock.vhd(122)
+Info (10041): Inferred latch for "IRDATA[0]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[1]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[2]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[3]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[4]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[5]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[6]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[7]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[8]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[9]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[10]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[11]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[12]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[13]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[14]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "IRDATA[15]" at CPURegisterBlock.vhd(73)
+Info (10041): Inferred latch for "PC[0]" at CPURegisterBlock.vhd(85)
+Info (10041): Inferred latch for "PC[1]" at CPURegisterBlock.vhd(85)
+Info (10041): Inferred latch for "PC[2]" at CPURegisterBlock.vhd(85)
+Info (10041): Inferred latch for "PC[3]" at CPURegisterBlock.vhd(85)
+Info (10041): Inferred latch for "PC[4]" at CPURegisterBlock.vhd(85)
+Info (10041): Inferred latch for "PC[5]" at CPURegisterBlock.vhd(85)
+Info (10041): Inferred latch for "PC[6]" at CPURegisterBlock.vhd(85)
+Info (10041): Inferred latch for "PC[7]" at CPURegisterBlock.vhd(85)
+Info: Elaborating entity "ALU" for hierarchy "ALU:inst27"
+Warning (10492): VHDL Process Statement warning at ALU.vhd(29): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(30): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(39): signal "Cin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(40): signal "ACC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(42): signal "ACC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ALU.vhd(22): inferring latch(es) for signal or variable "A", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(22): inferring latch(es) for signal or variable "B", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(22): inferring latch(es) for signal or variable "ACC", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(22): inferring latch(es) for signal or variable "Cout", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Cout" at ALU.vhd(22)
+Info (10041): Inferred latch for "ACC[0]" at ALU.vhd(22)
+Info (10041): Inferred latch for "ACC[1]" at ALU.vhd(22)
+Info (10041): Inferred latch for "ACC[2]" at ALU.vhd(22)
+Info (10041): Inferred latch for "ACC[3]" at ALU.vhd(22)
+Info (10041): Inferred latch for "ACC[4]" at ALU.vhd(22)
+Info (10041): Inferred latch for "ACC[5]" at ALU.vhd(22)
+Info (10041): Inferred latch for "ACC[6]" at ALU.vhd(22)
+Info (10041): Inferred latch for "ACC[7]" at ALU.vhd(22)
+Info (10041): Inferred latch for "P1:B[0]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:B[1]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:B[2]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:B[3]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:B[4]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:B[5]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:B[6]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:B[7]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:A[0]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:A[1]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:A[2]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:A[3]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:A[4]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:A[5]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:A[6]" at ALU.vhd(27)
+Info (10041): Inferred latch for "P1:A[7]" at ALU.vhd(27)
+Info: Elaborating entity "My16x8MUX" for hierarchy "My16x8MUX:inst28"
+Warning (10492): VHDL Process Statement warning at My16x8MUX.vhd(19): signal "Sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at My16x8MUX.vhd(20): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at My16x8MUX.vhd(22): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at My16x8MUX.vhd(15): inferring latch(es) for signal or variable "S", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "S[0]" at My16x8MUX.vhd(15)
+Info (10041): Inferred latch for "S[1]" at My16x8MUX.vhd(15)
+Info (10041): Inferred latch for "S[2]" at My16x8MUX.vhd(15)
+Info (10041): Inferred latch for "S[3]" at My16x8MUX.vhd(15)
+Info (10041): Inferred latch for "S[4]" at My16x8MUX.vhd(15)
+Info (10041): Inferred latch for "S[5]" at My16x8MUX.vhd(15)
+Info (10041): Inferred latch for "S[6]" at My16x8MUX.vhd(15)
+Info (10041): Inferred latch for "S[7]" at My16x8MUX.vhd(15)
+Info: Elaborating entity "lpm_rom0" for hierarchy "lpm_rom0:inst26"
+Info: Elaborating entity "altsyncram" for hierarchy "lpm_rom0:inst26|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "lpm_rom0:inst26|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "lpm_rom0:inst26|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "address_aclr_a" = "NONE"
+    Info: Parameter "clock_enable_input_a" = "BYPASS"
+    Info: Parameter "clock_enable_output_a" = "BYPASS"
+    Info: Parameter "init_file" = "mem.mif"
+    Info: Parameter "intended_device_family" = "Cyclone III"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info: Parameter "lpm_type" = "altsyncram"
+    Info: Parameter "numwords_a" = "256"
+    Info: Parameter "operation_mode" = "ROM"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "outdata_reg_a" = "CLOCK0"
+    Info: Parameter "widthad_a" = "8"
+    Info: Parameter "width_a" = "16"
+    Info: Parameter "width_byteena_a" = "1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_ei91.tdf
+    Info: Found entity 1: altsyncram_ei91
+Info: Elaborating entity "altsyncram_ei91" for hierarchy "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated"
+Warning: Synthesized away the following node(s):
+    Warning: Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[8]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[9]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[10]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[11]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[12]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[13]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[14]"
+        Warning (14320): Synthesized away node "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|q_a[15]"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED1[3]" is stuck at GND
+    Warning (13410): Pin "LED1[2]" is stuck at GND
+    Warning (13410): Pin "LED1[1]" is stuck at GND
+    Warning (13410): Pin "LED1[0]" is stuck at GND
+    Warning (13410): Pin "LED7S[7]" is stuck at GND
+    Warning (13410): Pin "LED7S[6]" is stuck at GND
+    Warning (13410): Pin "LED7S[5]" is stuck at VCC
+    Warning (13410): Pin "LED7S[4]" is stuck at VCC
+    Warning (13410): Pin "LED7S[3]" is stuck at VCC
+    Warning (13410): Pin "LED7S[2]" is stuck at VCC
+    Warning (13410): Pin "LED7S[1]" is stuck at VCC
+    Warning (13410): Pin "LED7S[0]" is stuck at VCC
+Info: 1 registers lost all their fanouts during netlist optimizations. The first 1 are displayed below.
+    Info: Register "lpm_rom0:inst26|altsyncram:altsyncram_component|altsyncram_ei91:auto_generated|rden_a_store" lost all its fanouts during netlist optimizations.
+Warning: Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "REBOOT"
+    Warning (15610): No output dependent on input pin "EXECTURE"
+Info: Implemented 69 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 15 output pins
+    Info: Implemented 51 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 153 warnings
+    Info: Peak virtual memory: 269 megabytes
+    Info: Processing ended: Wed Dec 06 00:05:13 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

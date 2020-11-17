@@ -1,0 +1,23 @@
+|MUX2_1_4bits
+O1 <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+B1 => inst13.IN0
+select => inst1.IN0
+select => inst.IN1
+select => inst2.IN0
+select => inst14.IN1
+select => inst3.IN0
+select => inst16.IN1
+select => inst4.IN0
+select => inst18.IN1
+A1 => inst.IN0
+O2 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+B2 => inst15.IN0
+A2 => inst14.IN0
+O3 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+B3 => inst17.IN0
+A3 => inst16.IN0
+O4 <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+B4 => inst19.IN0
+A4 => inst18.IN0
+
+

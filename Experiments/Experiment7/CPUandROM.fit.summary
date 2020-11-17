@@ -1,0 +1,17 @@
+Fitter Status : Successful - Tue Nov 28 20:35:03 2017
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : CPUandROM
+Top-level Entity Name : CPUandROM
+Family : Stratix II
+Device : EP2S15F484C3
+Timing Models : Final
+Logic utilization : < 1 %
+    Combinational ALUTs : 62 / 12,480 ( < 1 % )
+    Dedicated logic registers : 51 / 12,480 ( < 1 % )
+Total registers : 51
+Total pins : 44 / 343 ( 13 % )
+Total virtual pins : 0
+Total block memory bits : 4,096 / 419,328 ( < 1 % )
+DSP block 9-bit elements : 0 / 96 ( 0 % )
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

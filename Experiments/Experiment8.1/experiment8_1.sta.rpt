@@ -1,0 +1,1134 @@
+TimeQuest Timing Analyzer report for experiment8_1
+Thu Dec 07 16:26:56 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Slow 1200mV 85C Model Setup Summary
+  7. Slow 1200mV 85C Model Hold Summary
+  8. Slow 1200mV 85C Model Recovery Summary
+  9. Slow 1200mV 85C Model Removal Summary
+ 10. Slow 1200mV 85C Model Minimum Pulse Width
+ 11. Setup Times
+ 12. Hold Times
+ 13. Clock to Output Times
+ 14. Minimum Clock to Output Times
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width
+ 21. Setup Times
+ 22. Hold Times
+ 23. Clock to Output Times
+ 24. Minimum Clock to Output Times
+ 25. Fast 1200mV 0C Model Setup Summary
+ 26. Fast 1200mV 0C Model Hold Summary
+ 27. Fast 1200mV 0C Model Recovery Summary
+ 28. Fast 1200mV 0C Model Removal Summary
+ 29. Fast 1200mV 0C Model Minimum Pulse Width
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Board Trace Model Assignments
+ 40. Input Transition Times
+ 41. Slow Corner Signal Integrity Metrics
+ 42. Fast Corner Signal Integrity Metrics
+ 43. Setup Transfers
+ 44. Hold Transfers
+ 45. Report TCCS
+ 46. Report RSKM
+ 47. Unconstrained Paths
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                     ;
++--------------------+--------------------------------------------------+
+; Quartus II Version ; Version 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name      ; experiment8_1                                    ;
+; Device Family      ; Cyclone III                                      ;
+; Device Name        ; EP3C40F780C8                                     ;
+; Timing Models      ; Final                                            ;
+; Delay Model        ; Combined                                         ;
+; Rise/Fall Delays   ; Enabled                                          ;
++--------------------+--------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.40        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;  25.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                           ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; Clock Name      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets             ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; CLK             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK }             ;
+; CPU:inst13|CLK2 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CPU:inst13|CLK2 } ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+
+
++-------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                    ;
++------------+-----------------+-----------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
++------------+-----------------+-----------------+------+
+; 138.18 MHz ; 138.18 MHz      ; CPU:inst13|CLK2 ;      ;
+; 221.04 MHz ; 221.04 MHz      ; CLK             ;      ;
++------------+-----------------+-----------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary      ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; CPU:inst13|CLK2 ; -6.561 ; -303.391      ;
+; CLK             ; -4.236 ; -59.602       ;
++-----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Slow 1200mV 85C Model Hold Summary      ;
++-----------------+-------+---------------+
+; Clock           ; Slack ; End Point TNS ;
++-----------------+-------+---------------+
+; CLK             ; 0.015 ; 0.000         ;
+; CPU:inst13|CLK2 ; 0.451 ; 0.000         ;
++-----------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width                                                                                                                                                                      ;
++--------+--------------+----------------+-------+-----------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type            ; Clock           ; Clock Edge ; Target                                                                                                       ;
++--------+--------------+----------------+-------+-----------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[10]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[11]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[12]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[13]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[14]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[15]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[6]                          ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[7]                          ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[8]                          ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[9]                          ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|ram_block1a6~porta_address_reg0 ;
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate       ; CLK             ; Rise       ; CLK                                                                                                          ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|CLK2                                                                                              ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|PC[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|PC[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|PC[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RX[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RX[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RY[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RY[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RZ[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RZ[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[0]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[1]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[2]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[3]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[4]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[5]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[6]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEL[2]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|TIMES[0]                                                                                          ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|TIMES[1]                                                                                          ;
+; 0.197  ; 0.323        ; 0.235          ; 0.109 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|ram_block1a6~porta_address_reg0 ;
+; 0.198  ; 0.327        ; 0.235          ; 0.106 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[10]                         ;
+; 0.198  ; 0.327        ; 0.235          ; 0.106 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[11]                         ;
+; 0.198  ; 0.327        ; 0.235          ; 0.106 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[12]                         ;
+; 0.198  ; 0.327        ; 0.235          ; 0.106 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[13]                         ;
+; 0.198  ; 0.327        ; 0.235          ; 0.106 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[14]                         ;
+; 0.198  ; 0.327        ; 0.235          ; 0.106 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[15]                         ;
+; 0.198  ; 0.327        ; 0.235          ; 0.106 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[6]                          ;
++--------+--------------+----------------+-------+-----------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; DATA[*]   ; CPU:inst13|CLK2 ; 7.105 ; 7.109 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[0]  ; CPU:inst13|CLK2 ; 1.986 ; 2.137 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[1]  ; CPU:inst13|CLK2 ; 2.036 ; 2.215 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[2]  ; CPU:inst13|CLK2 ; 3.337 ; 3.501 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[3]  ; CPU:inst13|CLK2 ; 7.105 ; 7.109 ; Fall       ; CPU:inst13|CLK2 ;
+; HLINPUT   ; CPU:inst13|CLK2 ; 7.768 ; 7.733 ; Fall       ; CPU:inst13|CLK2 ;
+; RA[*]     ; CPU:inst13|CLK2 ; 6.629 ; 7.196 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[0]    ; CPU:inst13|CLK2 ; 6.223 ; 6.712 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[1]    ; CPU:inst13|CLK2 ; 6.629 ; 7.196 ; Fall       ; CPU:inst13|CLK2 ;
+; WE        ; CPU:inst13|CLK2 ; 9.031 ; 9.197 ; Fall       ; CPU:inst13|CLK2 ;
+; WR        ; CPU:inst13|CLK2 ; 7.994 ; 8.564 ; Fall       ; CPU:inst13|CLK2 ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; DATA[*]   ; CPU:inst13|CLK2 ; -1.040 ; -1.233 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[0]  ; CPU:inst13|CLK2 ; -1.124 ; -1.319 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[1]  ; CPU:inst13|CLK2 ; -1.040 ; -1.233 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[2]  ; CPU:inst13|CLK2 ; -1.975 ; -2.211 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[3]  ; CPU:inst13|CLK2 ; -1.947 ; -2.185 ; Fall       ; CPU:inst13|CLK2 ;
+; HLINPUT   ; CPU:inst13|CLK2 ; -2.589 ; -2.904 ; Fall       ; CPU:inst13|CLK2 ;
+; RA[*]     ; CPU:inst13|CLK2 ; -2.260 ; -2.465 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[0]    ; CPU:inst13|CLK2 ; -2.260 ; -2.465 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[1]    ; CPU:inst13|CLK2 ; -3.865 ; -4.019 ; Fall       ; CPU:inst13|CLK2 ;
+; WE        ; CPU:inst13|CLK2 ; -2.391 ; -2.586 ; Fall       ; CPU:inst13|CLK2 ;
+; WR        ; CPU:inst13|CLK2 ; -1.646 ; -1.912 ; Fall       ; CPU:inst13|CLK2 ;
++-----------+-----------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LED7S[*]  ; CLK        ; 10.868 ; 10.353 ; Rise       ; CLK             ;
+;  LED7S[0] ; CLK        ; 8.262  ; 8.080  ; Rise       ; CLK             ;
+;  LED7S[1] ; CLK        ; 10.868 ; 10.353 ; Rise       ; CLK             ;
+;  LED7S[2] ; CLK        ; 7.591  ; 7.455  ; Rise       ; CLK             ;
+;  LED7S[3] ; CLK        ; 7.304  ; 7.212  ; Rise       ; CLK             ;
+;  LED7S[4] ; CLK        ; 10.604 ; 10.066 ; Rise       ; CLK             ;
+;  LED7S[5] ; CLK        ; 8.650  ; 8.389  ; Rise       ; CLK             ;
+;  LED7S[6] ; CLK        ; 9.016  ; 8.831  ; Rise       ; CLK             ;
+; SEL[*]    ; CLK        ; 9.680  ; 9.407  ; Rise       ; CLK             ;
+;  SEL[0]   ; CLK        ; 9.680  ; 9.407  ; Rise       ; CLK             ;
+;  SEL[1]   ; CLK        ; 8.370  ; 8.161  ; Rise       ; CLK             ;
+;  SEL[2]   ; CLK        ; 9.573  ; 9.361  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LED7S[*]  ; CLK        ; 7.145  ; 7.055  ; Rise       ; CLK             ;
+;  LED7S[0] ; CLK        ; 8.058  ; 7.881  ; Rise       ; CLK             ;
+;  LED7S[1] ; CLK        ; 10.568 ; 10.072 ; Rise       ; CLK             ;
+;  LED7S[2] ; CLK        ; 7.419  ; 7.286  ; Rise       ; CLK             ;
+;  LED7S[3] ; CLK        ; 7.145  ; 7.055  ; Rise       ; CLK             ;
+;  LED7S[4] ; CLK        ; 10.314 ; 9.797  ; Rise       ; CLK             ;
+;  LED7S[5] ; CLK        ; 8.431  ; 8.178  ; Rise       ; CLK             ;
+;  LED7S[6] ; CLK        ; 8.791  ; 8.612  ; Rise       ; CLK             ;
+; SEL[*]    ; CLK        ; 8.161  ; 7.957  ; Rise       ; CLK             ;
+;  SEL[0]   ; CLK        ; 9.429  ; 9.165  ; Rise       ; CLK             ;
+;  SEL[1]   ; CLK        ; 8.161  ; 7.957  ; Rise       ; CLK             ;
+;  SEL[2]   ; CLK        ; 9.325  ; 9.120  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                     ;
++------------+-----------------+-----------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
++------------+-----------------+-----------------+------+
+; 148.41 MHz ; 148.41 MHz      ; CPU:inst13|CLK2 ;      ;
+; 233.75 MHz ; 233.75 MHz      ; CLK             ;      ;
++------------+-----------------+-----------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary       ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; CPU:inst13|CLK2 ; -6.326 ; -289.839      ;
+; CLK             ; -3.850 ; -53.197       ;
++-----------------+--------+---------------+
+
+
++-----------------------------------------+
+; Slow 1200mV 0C Model Hold Summary       ;
++-----------------+-------+---------------+
+; Clock           ; Slack ; End Point TNS ;
++-----------------+-------+---------------+
+; CLK             ; 0.036 ; 0.000         ;
+; CPU:inst13|CLK2 ; 0.402 ; 0.000         ;
++-----------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width                                                                                                                                                                       ;
++--------+--------------+----------------+-------+-----------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type            ; Clock           ; Clock Edge ; Target                                                                                                       ;
++--------+--------------+----------------+-------+-----------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[10]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[11]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[12]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[13]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[14]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[15]                         ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[6]                          ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[7]                          ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[8]                          ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[9]                          ;
+; -3.201 ; 1.000        ; 4.201          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|ram_block1a6~porta_address_reg0 ;
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate       ; CLK             ; Rise       ; CLK                                                                                                          ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|CLK2                                                                                              ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|PC[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|PC[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|PC[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[2]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[3]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[4]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[5]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[6]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[7]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RX[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RX[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RY[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RY[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RZ[0]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RZ[1]                                                                                             ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[0]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[1]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[2]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[3]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[4]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[5]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[6]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEL[2]                                                                                            ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|TIMES[0]                                                                                          ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|TIMES[1]                                                                                          ;
+; 0.104  ; 0.138        ; 0.184          ; 0.150 ; Low Pulse Width ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[1]                                                                                             ;
+; 0.104  ; 0.137        ; 0.184          ; 0.151 ; Low Pulse Width ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[2]                                                                                             ;
+; 0.104  ; 0.138        ; 0.184          ; 0.150 ; Low Pulse Width ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[3]                                                                                             ;
+; 0.104  ; 0.137        ; 0.184          ; 0.151 ; Low Pulse Width ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[4]                                                                                             ;
+; 0.104  ; 0.138        ; 0.184          ; 0.150 ; Low Pulse Width ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[0]                                                                                             ;
+; 0.104  ; 0.138        ; 0.184          ; 0.150 ; Low Pulse Width ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[1]                                                                                             ;
+; 0.104  ; 0.138        ; 0.184          ; 0.150 ; Low Pulse Width ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[2]                                                                                             ;
+; 0.104  ; 0.138        ; 0.184          ; 0.150 ; Low Pulse Width ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[3]                                                                                             ;
++--------+--------------+----------------+-------+-----------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; DATA[*]   ; CPU:inst13|CLK2 ; 6.802 ; 6.352 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[0]  ; CPU:inst13|CLK2 ; 1.896 ; 1.901 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[1]  ; CPU:inst13|CLK2 ; 1.931 ; 1.966 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[2]  ; CPU:inst13|CLK2 ; 3.201 ; 3.126 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[3]  ; CPU:inst13|CLK2 ; 6.802 ; 6.352 ; Fall       ; CPU:inst13|CLK2 ;
+; HLINPUT   ; CPU:inst13|CLK2 ; 7.421 ; 6.913 ; Fall       ; CPU:inst13|CLK2 ;
+; RA[*]     ; CPU:inst13|CLK2 ; 6.107 ; 6.740 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[0]    ; CPU:inst13|CLK2 ; 5.706 ; 6.279 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[1]    ; CPU:inst13|CLK2 ; 6.107 ; 6.740 ; Fall       ; CPU:inst13|CLK2 ;
+; WE        ; CPU:inst13|CLK2 ; 8.570 ; 8.399 ; Fall       ; CPU:inst13|CLK2 ;
+; WR        ; CPU:inst13|CLK2 ; 7.328 ; 7.997 ; Fall       ; CPU:inst13|CLK2 ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; DATA[*]   ; CPU:inst13|CLK2 ; -1.020 ; -1.093 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[0]  ; CPU:inst13|CLK2 ; -1.085 ; -1.193 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[1]  ; CPU:inst13|CLK2 ; -1.020 ; -1.093 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[2]  ; CPU:inst13|CLK2 ; -1.918 ; -1.976 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[3]  ; CPU:inst13|CLK2 ; -1.896 ; -1.952 ; Fall       ; CPU:inst13|CLK2 ;
+; HLINPUT   ; CPU:inst13|CLK2 ; -2.463 ; -2.598 ; Fall       ; CPU:inst13|CLK2 ;
+; RA[*]     ; CPU:inst13|CLK2 ; -2.163 ; -2.219 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[0]    ; CPU:inst13|CLK2 ; -2.163 ; -2.219 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[1]    ; CPU:inst13|CLK2 ; -3.734 ; -3.595 ; Fall       ; CPU:inst13|CLK2 ;
+; WE        ; CPU:inst13|CLK2 ; -2.324 ; -2.316 ; Fall       ; CPU:inst13|CLK2 ;
+; WR        ; CPU:inst13|CLK2 ; -1.584 ; -1.696 ; Fall       ; CPU:inst13|CLK2 ;
++-----------+-----------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++-----------+------------+--------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+-------+------------+-----------------+
+; LED7S[*]  ; CLK        ; 10.595 ; 9.608 ; Rise       ; CLK             ;
+;  LED7S[0] ; CLK        ; 7.895  ; 7.646 ; Rise       ; CLK             ;
+;  LED7S[1] ; CLK        ; 10.595 ; 9.608 ; Rise       ; CLK             ;
+;  LED7S[2] ; CLK        ; 7.273  ; 7.052 ; Rise       ; CLK             ;
+;  LED7S[3] ; CLK        ; 6.991  ; 6.819 ; Rise       ; CLK             ;
+;  LED7S[4] ; CLK        ; 10.372 ; 9.340 ; Rise       ; CLK             ;
+;  LED7S[5] ; CLK        ; 8.281  ; 7.883 ; Rise       ; CLK             ;
+;  LED7S[6] ; CLK        ; 8.693  ; 8.284 ; Rise       ; CLK             ;
+; SEL[*]    ; CLK        ; 9.349  ; 8.789 ; Rise       ; CLK             ;
+;  SEL[0]   ; CLK        ; 9.349  ; 8.789 ; Rise       ; CLK             ;
+;  SEL[1]   ; CLK        ; 7.971  ; 7.719 ; Rise       ; CLK             ;
+;  SEL[2]   ; CLK        ; 9.227  ; 8.750 ; Rise       ; CLK             ;
++-----------+------------+--------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++-----------+------------+--------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+-------+------------+-----------------+
+; LED7S[*]  ; CLK        ; 6.847  ; 6.680 ; Rise       ; CLK             ;
+;  LED7S[0] ; CLK        ; 7.707  ; 7.465 ; Rise       ; CLK             ;
+;  LED7S[1] ; CLK        ; 10.307 ; 9.358 ; Rise       ; CLK             ;
+;  LED7S[2] ; CLK        ; 7.115  ; 6.900 ; Rise       ; CLK             ;
+;  LED7S[3] ; CLK        ; 6.847  ; 6.680 ; Rise       ; CLK             ;
+;  LED7S[4] ; CLK        ; 10.094 ; 9.102 ; Rise       ; CLK             ;
+;  LED7S[5] ; CLK        ; 8.079  ; 7.694 ; Rise       ; CLK             ;
+;  LED7S[6] ; CLK        ; 8.483  ; 8.088 ; Rise       ; CLK             ;
+; SEL[*]    ; CLK        ; 7.780  ; 7.536 ; Rise       ; CLK             ;
+;  SEL[0]   ; CLK        ; 9.113  ; 8.574 ; Rise       ; CLK             ;
+;  SEL[1]   ; CLK        ; 7.780  ; 7.536 ; Rise       ; CLK             ;
+;  SEL[2]   ; CLK        ; 8.995  ; 8.536 ; Rise       ; CLK             ;
++-----------+------------+--------+-------+------------+-----------------+
+
+
++------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary       ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; CPU:inst13|CLK2 ; -2.613 ; -109.602      ;
+; CLK             ; -1.627 ; -14.882       ;
++-----------------+--------+---------------+
+
+
++------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary        ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; CLK             ; -0.162 ; -0.162        ;
+; CPU:inst13|CLK2 ; 0.183  ; 0.000         ;
++-----------------+--------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width                                                                                                                                                                       ;
++--------+--------------+----------------+-------+-----------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type            ; Clock           ; Clock Edge ; Target                                                                                                       ;
++--------+--------------+----------------+-------+-----------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate       ; CLK             ; Rise       ; CLK                                                                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|CLK2                                                                                              ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[2]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[3]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[4]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[5]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[6]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CX[7]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[2]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[3]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[4]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[5]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[6]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CY[7]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[2]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[3]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[4]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[5]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[6]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|CZ[7]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[2]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|OP[3]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|PC[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|PC[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|PC[2]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[2]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[3]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[4]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[5]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[6]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R1[7]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[2]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[3]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[4]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[5]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[6]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R2[7]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[2]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[3]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[4]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[5]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[6]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R3[7]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[2]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[3]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[4]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[5]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[6]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|R4[7]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RX[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RX[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RY[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RY[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RZ[0]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CPU:inst13|CLK2 ; Fall       ; CPU:inst13|RZ[1]                                                                                             ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[0]                                                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[1]                                                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[2]                                                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[3]                                                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[4]                                                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[5]                                                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEG[6]                                                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|SEL[2]                                                                                            ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|TIMES[0]                                                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; CPU:inst13|TIMES[1]                                                                                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[10]                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[11]                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[12]                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[13]                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[14]                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[15]                         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[6]                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[7]                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[8]                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[9]                          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period      ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|ram_block1a6~porta_address_reg0 ;
+; -0.120 ; 0.053        ; 0.230          ; 0.057 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|ram_block1a6~porta_address_reg0 ;
+; -0.119 ; 0.056        ; 0.230          ; 0.055 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[10]                         ;
+; -0.119 ; 0.056        ; 0.230          ; 0.055 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[11]                         ;
+; -0.119 ; 0.056        ; 0.230          ; 0.055 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[12]                         ;
+; -0.119 ; 0.056        ; 0.230          ; 0.055 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[13]                         ;
+; -0.119 ; 0.056        ; 0.230          ; 0.055 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[14]                         ;
+; -0.119 ; 0.056        ; 0.230          ; 0.055 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[15]                         ;
+; -0.119 ; 0.056        ; 0.230          ; 0.055 ; Low Pulse Width ; CLK             ; Rise       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_rq81:auto_generated|q_a[6]                          ;
++--------+--------------+----------------+-------+-----------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; DATA[*]   ; CPU:inst13|CLK2 ; 2.927 ; 3.891 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[0]  ; CPU:inst13|CLK2 ; 0.779 ; 1.382 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[1]  ; CPU:inst13|CLK2 ; 0.778 ; 1.391 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[2]  ; CPU:inst13|CLK2 ; 1.393 ; 2.109 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[3]  ; CPU:inst13|CLK2 ; 2.927 ; 3.891 ; Fall       ; CPU:inst13|CLK2 ;
+; HLINPUT   ; CPU:inst13|CLK2 ; 3.136 ; 4.054 ; Fall       ; CPU:inst13|CLK2 ;
+; RA[*]     ; CPU:inst13|CLK2 ; 2.947 ; 3.486 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[0]    ; CPU:inst13|CLK2 ; 2.704 ; 3.146 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[1]    ; CPU:inst13|CLK2 ; 2.947 ; 3.486 ; Fall       ; CPU:inst13|CLK2 ;
+; WE        ; CPU:inst13|CLK2 ; 3.841 ; 4.617 ; Fall       ; CPU:inst13|CLK2 ;
+; WR        ; CPU:inst13|CLK2 ; 3.632 ; 4.089 ; Fall       ; CPU:inst13|CLK2 ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; DATA[*]   ; CPU:inst13|CLK2 ; -0.348 ; -0.924 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[0]  ; CPU:inst13|CLK2 ; -0.427 ; -1.009 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[1]  ; CPU:inst13|CLK2 ; -0.348 ; -0.924 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[2]  ; CPU:inst13|CLK2 ; -0.802 ; -1.461 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[3]  ; CPU:inst13|CLK2 ; -0.786 ; -1.441 ; Fall       ; CPU:inst13|CLK2 ;
+; HLINPUT   ; CPU:inst13|CLK2 ; -1.064 ; -1.729 ; Fall       ; CPU:inst13|CLK2 ;
+; RA[*]     ; CPU:inst13|CLK2 ; -0.864 ; -1.479 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[0]    ; CPU:inst13|CLK2 ; -0.864 ; -1.479 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[1]    ; CPU:inst13|CLK2 ; -1.557 ; -2.311 ; Fall       ; CPU:inst13|CLK2 ;
+; WE        ; CPU:inst13|CLK2 ; -1.006 ; -1.688 ; Fall       ; CPU:inst13|CLK2 ;
+; WR        ; CPU:inst13|CLK2 ; -0.676 ; -1.322 ; Fall       ; CPU:inst13|CLK2 ;
++-----------+-----------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LED7S[*]  ; CLK        ; 5.014 ; 5.211 ; Rise       ; CLK             ;
+;  LED7S[0] ; CLK        ; 3.915 ; 4.031 ; Rise       ; CLK             ;
+;  LED7S[1] ; CLK        ; 5.014 ; 5.211 ; Rise       ; CLK             ;
+;  LED7S[2] ; CLK        ; 3.635 ; 3.738 ; Rise       ; CLK             ;
+;  LED7S[3] ; CLK        ; 3.532 ; 3.576 ; Rise       ; CLK             ;
+;  LED7S[4] ; CLK        ; 4.891 ; 5.075 ; Rise       ; CLK             ;
+;  LED7S[5] ; CLK        ; 4.051 ; 4.210 ; Rise       ; CLK             ;
+;  LED7S[6] ; CLK        ; 4.295 ; 4.457 ; Rise       ; CLK             ;
+; SEL[*]    ; CLK        ; 4.573 ; 4.767 ; Rise       ; CLK             ;
+;  SEL[0]   ; CLK        ; 4.573 ; 4.767 ; Rise       ; CLK             ;
+;  SEL[1]   ; CLK        ; 3.953 ; 4.071 ; Rise       ; CLK             ;
+;  SEL[2]   ; CLK        ; 4.516 ; 4.706 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LED7S[*]  ; CLK        ; 3.461 ; 3.503 ; Rise       ; CLK             ;
+;  LED7S[0] ; CLK        ; 3.823 ; 3.933 ; Rise       ; CLK             ;
+;  LED7S[1] ; CLK        ; 4.884 ; 5.073 ; Rise       ; CLK             ;
+;  LED7S[2] ; CLK        ; 3.557 ; 3.656 ; Rise       ; CLK             ;
+;  LED7S[3] ; CLK        ; 3.461 ; 3.503 ; Rise       ; CLK             ;
+;  LED7S[4] ; CLK        ; 4.767 ; 4.942 ; Rise       ; CLK             ;
+;  LED7S[5] ; CLK        ; 3.955 ; 4.107 ; Rise       ; CLK             ;
+;  LED7S[6] ; CLK        ; 4.194 ; 4.349 ; Rise       ; CLK             ;
+; SEL[*]    ; CLK        ; 3.860 ; 3.972 ; Rise       ; CLK             ;
+;  SEL[0]   ; CLK        ; 4.462 ; 4.647 ; Rise       ; CLK             ;
+;  SEL[1]   ; CLK        ; 3.860 ; 3.972 ; Rise       ; CLK             ;
+;  SEL[2]   ; CLK        ; 4.407 ; 4.589 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+----------+--------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -6.561   ; -0.162 ; 0.0      ; 0.0     ; -3.201              ;
+;  CLK             ; -4.236   ; -0.162 ; N/A      ; N/A     ; N/A                 ;
+;  CPU:inst13|CLK2 ; -6.561   ; 0.183  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; -362.993 ; -0.162 ; 0.0      ; 0.0     ; N/A                 ;
+;  CLK             ; -59.602  ; -0.162 ; N/A      ; N/A     ; N/A                 ;
+;  CPU:inst13|CLK2 ; -303.391 ; 0.000  ; N/A      ; N/A     ; N/A                 ;
++------------------+----------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; DATA[*]   ; CPU:inst13|CLK2 ; 7.105 ; 7.109 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[0]  ; CPU:inst13|CLK2 ; 1.986 ; 2.137 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[1]  ; CPU:inst13|CLK2 ; 2.036 ; 2.215 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[2]  ; CPU:inst13|CLK2 ; 3.337 ; 3.501 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[3]  ; CPU:inst13|CLK2 ; 7.105 ; 7.109 ; Fall       ; CPU:inst13|CLK2 ;
+; HLINPUT   ; CPU:inst13|CLK2 ; 7.768 ; 7.733 ; Fall       ; CPU:inst13|CLK2 ;
+; RA[*]     ; CPU:inst13|CLK2 ; 6.629 ; 7.196 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[0]    ; CPU:inst13|CLK2 ; 6.223 ; 6.712 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[1]    ; CPU:inst13|CLK2 ; 6.629 ; 7.196 ; Fall       ; CPU:inst13|CLK2 ;
+; WE        ; CPU:inst13|CLK2 ; 9.031 ; 9.197 ; Fall       ; CPU:inst13|CLK2 ;
+; WR        ; CPU:inst13|CLK2 ; 7.994 ; 8.564 ; Fall       ; CPU:inst13|CLK2 ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; DATA[*]   ; CPU:inst13|CLK2 ; -0.348 ; -0.924 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[0]  ; CPU:inst13|CLK2 ; -0.427 ; -1.009 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[1]  ; CPU:inst13|CLK2 ; -0.348 ; -0.924 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[2]  ; CPU:inst13|CLK2 ; -0.802 ; -1.461 ; Fall       ; CPU:inst13|CLK2 ;
+;  DATA[3]  ; CPU:inst13|CLK2 ; -0.786 ; -1.441 ; Fall       ; CPU:inst13|CLK2 ;
+; HLINPUT   ; CPU:inst13|CLK2 ; -1.064 ; -1.729 ; Fall       ; CPU:inst13|CLK2 ;
+; RA[*]     ; CPU:inst13|CLK2 ; -0.864 ; -1.479 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[0]    ; CPU:inst13|CLK2 ; -0.864 ; -1.479 ; Fall       ; CPU:inst13|CLK2 ;
+;  RA[1]    ; CPU:inst13|CLK2 ; -1.557 ; -2.311 ; Fall       ; CPU:inst13|CLK2 ;
+; WE        ; CPU:inst13|CLK2 ; -1.006 ; -1.688 ; Fall       ; CPU:inst13|CLK2 ;
+; WR        ; CPU:inst13|CLK2 ; -0.676 ; -1.322 ; Fall       ; CPU:inst13|CLK2 ;
++-----------+-----------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LED7S[*]  ; CLK        ; 10.868 ; 10.353 ; Rise       ; CLK             ;
+;  LED7S[0] ; CLK        ; 8.262  ; 8.080  ; Rise       ; CLK             ;
+;  LED7S[1] ; CLK        ; 10.868 ; 10.353 ; Rise       ; CLK             ;
+;  LED7S[2] ; CLK        ; 7.591  ; 7.455  ; Rise       ; CLK             ;
+;  LED7S[3] ; CLK        ; 7.304  ; 7.212  ; Rise       ; CLK             ;
+;  LED7S[4] ; CLK        ; 10.604 ; 10.066 ; Rise       ; CLK             ;
+;  LED7S[5] ; CLK        ; 8.650  ; 8.389  ; Rise       ; CLK             ;
+;  LED7S[6] ; CLK        ; 9.016  ; 8.831  ; Rise       ; CLK             ;
+; SEL[*]    ; CLK        ; 9.680  ; 9.407  ; Rise       ; CLK             ;
+;  SEL[0]   ; CLK        ; 9.680  ; 9.407  ; Rise       ; CLK             ;
+;  SEL[1]   ; CLK        ; 8.370  ; 8.161  ; Rise       ; CLK             ;
+;  SEL[2]   ; CLK        ; 9.573  ; 9.361  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LED7S[*]  ; CLK        ; 3.461 ; 3.503 ; Rise       ; CLK             ;
+;  LED7S[0] ; CLK        ; 3.823 ; 3.933 ; Rise       ; CLK             ;
+;  LED7S[1] ; CLK        ; 4.884 ; 5.073 ; Rise       ; CLK             ;
+;  LED7S[2] ; CLK        ; 3.557 ; 3.656 ; Rise       ; CLK             ;
+;  LED7S[3] ; CLK        ; 3.461 ; 3.503 ; Rise       ; CLK             ;
+;  LED7S[4] ; CLK        ; 4.767 ; 4.942 ; Rise       ; CLK             ;
+;  LED7S[5] ; CLK        ; 3.955 ; 4.107 ; Rise       ; CLK             ;
+;  LED7S[6] ; CLK        ; 4.194 ; 4.349 ; Rise       ; CLK             ;
+; SEL[*]    ; CLK        ; 3.860 ; 3.972 ; Rise       ; CLK             ;
+;  SEL[0]   ; CLK        ; 4.462 ; 4.647 ; Rise       ; CLK             ;
+;  SEL[1]   ; CLK        ; 3.860 ; 3.972 ; Rise       ; CLK             ;
+;  SEL[2]   ; CLK        ; 4.407 ; 4.589 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; LED7S[7]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED7S[6]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED7S[5]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED7S[4]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED7S[3]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED7S[2]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED7S[1]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED7S[0]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; SEL[2]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; SEL[1]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; SEL[0]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; CLK                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; WE                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA[0]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; WR                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RA[0]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; HLINPUT                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RA[1]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA[1]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA[2]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA[3]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LED7S[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.9e-007 V                   ; 2.35 V              ; -0.00108 V          ; 0.061 V                              ; 0.002 V                              ; 4.84e-010 s                 ; 4.97e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.9e-007 V                  ; 2.35 V             ; -0.00108 V         ; 0.061 V                             ; 0.002 V                             ; 4.84e-010 s                ; 4.97e-010 s                ; Yes                       ; Yes                       ;
+; LED7S[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.95e-007 V                  ; 2.34 V              ; -0.00548 V          ; 0.078 V                              ; 0.022 V                              ; 9.09e-010 s                 ; 8.84e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.95e-007 V                 ; 2.34 V             ; -0.00548 V         ; 0.078 V                             ; 0.022 V                             ; 9.09e-010 s                ; 8.84e-010 s                ; Yes                       ; Yes                       ;
+; LED7S[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.9e-007 V                   ; 2.35 V              ; -0.00108 V          ; 0.061 V                              ; 0.002 V                              ; 4.84e-010 s                 ; 4.97e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.9e-007 V                  ; 2.35 V             ; -0.00108 V         ; 0.061 V                             ; 0.002 V                             ; 4.84e-010 s                ; 4.97e-010 s                ; Yes                       ; Yes                       ;
+; LED7S[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.95e-007 V                  ; 2.34 V              ; -0.00548 V          ; 0.078 V                              ; 0.022 V                              ; 9.09e-010 s                 ; 8.84e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.95e-007 V                 ; 2.34 V             ; -0.00548 V         ; 0.078 V                             ; 0.022 V                             ; 9.09e-010 s                ; 8.84e-010 s                ; Yes                       ; Yes                       ;
+; LED7S[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.95e-007 V                  ; 2.34 V              ; -0.00548 V          ; 0.078 V                              ; 0.022 V                              ; 9.09e-010 s                 ; 8.84e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.95e-007 V                 ; 2.34 V             ; -0.00548 V         ; 0.078 V                             ; 0.022 V                             ; 9.09e-010 s                ; 8.84e-010 s                ; Yes                       ; Yes                       ;
+; LED7S[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.95e-007 V                  ; 2.34 V              ; -0.00564 V          ; 0.066 V                              ; 0.016 V                              ; 6.89e-010 s                 ; 6.77e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.95e-007 V                 ; 2.34 V             ; -0.00564 V         ; 0.066 V                             ; 0.016 V                             ; 6.89e-010 s                ; 6.77e-010 s                ; Yes                       ; Yes                       ;
+; LED7S[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.95e-007 V                  ; 2.34 V              ; -0.00548 V          ; 0.078 V                              ; 0.022 V                              ; 9.09e-010 s                 ; 8.84e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.95e-007 V                 ; 2.34 V             ; -0.00548 V         ; 0.078 V                             ; 0.022 V                             ; 9.09e-010 s                ; 8.84e-010 s                ; Yes                       ; Yes                       ;
+; LED7S[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.9e-007 V                   ; 2.35 V              ; -0.00108 V          ; 0.061 V                              ; 0.002 V                              ; 4.84e-010 s                 ; 4.97e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.9e-007 V                  ; 2.35 V             ; -0.00108 V         ; 0.061 V                             ; 0.002 V                             ; 4.84e-010 s                ; 4.97e-010 s                ; Yes                       ; Yes                       ;
+; SEL[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.95e-007 V                  ; 2.34 V              ; -0.00548 V          ; 0.078 V                              ; 0.022 V                              ; 9.09e-010 s                 ; 8.84e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.95e-007 V                 ; 2.34 V             ; -0.00548 V         ; 0.078 V                             ; 0.022 V                             ; 9.09e-010 s                ; 8.84e-010 s                ; Yes                       ; Yes                       ;
+; SEL[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.9e-007 V                   ; 2.35 V              ; -0.00108 V          ; 0.061 V                              ; 0.002 V                              ; 4.84e-010 s                 ; 4.97e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.9e-007 V                  ; 2.35 V             ; -0.00108 V         ; 0.061 V                             ; 0.002 V                             ; 4.84e-010 s                ; 4.97e-010 s                ; Yes                       ; Yes                       ;
+; SEL[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.95e-007 V                  ; 2.34 V              ; -0.00548 V          ; 0.078 V                              ; 0.022 V                              ; 9.09e-010 s                 ; 8.84e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.95e-007 V                 ; 2.34 V             ; -0.00548 V         ; 0.078 V                             ; 0.022 V                             ; 9.09e-010 s                ; 8.84e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.53e-007 V                  ; 2.34 V              ; -0.00829 V          ; 0.106 V                              ; 0.016 V                              ; 6.53e-010 s                 ; 5.54e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.53e-007 V                 ; 2.34 V             ; -0.00829 V         ; 0.106 V                             ; 0.016 V                             ; 6.53e-010 s                ; 5.54e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.51e-007 V                  ; 2.34 V              ; -0.0032 V           ; 0.118 V                              ; 0.017 V                              ; 8.67e-010 s                 ; 1.08e-009 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.51e-007 V                 ; 2.34 V             ; -0.0032 V          ; 0.118 V                             ; 0.017 V                             ; 8.67e-010 s                ; 1.08e-009 s                ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LED7S[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-008 V                  ; 2.73 V              ; -0.0567 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-010 s                 ; 2.76e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-008 V                 ; 2.73 V             ; -0.0567 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-010 s                ; 2.76e-010 s                ; Yes                       ; Yes                       ;
+; LED7S[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; LED7S[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-008 V                  ; 2.73 V              ; -0.0567 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-010 s                 ; 2.76e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-008 V                 ; 2.73 V             ; -0.0567 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-010 s                ; 2.76e-010 s                ; Yes                       ; Yes                       ;
+; LED7S[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; LED7S[3]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; LED7S[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.72 V              ; -0.0395 V           ; 0.163 V                              ; 0.079 V                              ; 4.51e-010 s                 ; 4.33e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.72 V             ; -0.0395 V          ; 0.163 V                             ; 0.079 V                             ; 4.51e-010 s                ; 4.33e-010 s                ; No                        ; Yes                       ;
+; LED7S[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; LED7S[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-008 V                  ; 2.73 V              ; -0.0567 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-010 s                 ; 2.76e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-008 V                 ; 2.73 V             ; -0.0567 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-010 s                ; 2.76e-010 s                ; Yes                       ; Yes                       ;
+; SEL[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; SEL[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-008 V                  ; 2.73 V              ; -0.0567 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-010 s                 ; 2.76e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-008 V                 ; 2.73 V             ; -0.0567 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-010 s                ; 2.76e-010 s                ; Yes                       ; Yes                       ;
+; SEL[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.068 V                              ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.068 V                             ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.19e-008 V                  ; 2.72 V              ; -0.0746 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-010 s                  ; 3.01e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.19e-008 V                 ; 2.72 V             ; -0.0746 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-010 s                 ; 3.01e-010 s                ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-008 V                  ; 2.7 V               ; -0.021 V            ; 0.204 V                              ; 0.048 V                              ; 4.85e-010 s                 ; 6.74e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-008 V                 ; 2.7 V              ; -0.021 V           ; 0.204 V                             ; 0.048 V                             ; 4.85e-010 s                ; 6.74e-010 s                ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Setup Transfers                                                               ;
++-----------------+-----------------+----------+----------+----------+----------+
+; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------+-----------------+----------+----------+----------+----------+
+; CLK             ; CLK             ; 214      ; 0        ; 0        ; 0        ;
+; CPU:inst13|CLK2 ; CLK             ; 1        ; 228      ; 0        ; 0        ;
+; CLK             ; CPU:inst13|CLK2 ; 0        ; 0        ; 1663     ; 0        ;
+; CPU:inst13|CLK2 ; CPU:inst13|CLK2 ; 0        ; 0        ; 0        ; 4344     ;
++-----------------+-----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------+
+; Hold Transfers                                                                ;
++-----------------+-----------------+----------+----------+----------+----------+
+; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------+-----------------+----------+----------+----------+----------+
+; CLK             ; CLK             ; 214      ; 0        ; 0        ; 0        ;
+; CPU:inst13|CLK2 ; CLK             ; 1        ; 228      ; 0        ; 0        ;
+; CLK             ; CPU:inst13|CLK2 ; 0        ; 0        ; 1663     ; 0        ;
+; CPU:inst13|CLK2 ; CPU:inst13|CLK2 ; 0        ; 0        ; 0        ; 4344     ;
++-----------------+-----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design.
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design.
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 266   ; 266  ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Thu Dec 07 16:26:52 2017
+Info: Command: quartus_sta experiment8_1 -c experiment8_1
+Info: qsta_default_script.tcl version: #3
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Core supply voltage is 1.2V
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'experiment8_1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name CPU:inst13|CLK2 CPU:inst13|CLK2
+    Info: create_clock -period 1.000 -name CLK CLK
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning: From CPU:inst13|CLK2 (Rise) to CPU:inst13|CLK2 (Rise) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Fall) to CPU:inst13|CLK2 (Rise) (setup and hold)
+    Critical Warning: From CLK (Rise) to CPU:inst13|CLK2 (Rise) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Rise) to CPU:inst13|CLK2 (Fall) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Fall) to CPU:inst13|CLK2 (Fall) (setup and hold)
+    Critical Warning: From CLK (Rise) to CPU:inst13|CLK2 (Fall) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Rise) to CLK (Rise) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Fall) to CLK (Rise) (setup and hold)
+    Critical Warning: From CLK (Rise) to CLK (Rise) (setup and hold)
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -6.561
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -6.561      -303.391 CPU:inst13|CLK2 
+    Info:    -4.236       -59.602 CLK 
+Info: Worst-case hold slack is 0.015
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.015         0.000 CLK 
+    Info:     0.451         0.000 CPU:inst13|CLK2 
+Info: No recovery paths to report
+Info: No removal paths to report
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: The Metastability Analysis global option is set to OFF.
+Info: No synchronizer chains to report.
+Info: Analyzing Slow 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning: From CPU:inst13|CLK2 (Rise) to CPU:inst13|CLK2 (Rise) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Fall) to CPU:inst13|CLK2 (Rise) (setup and hold)
+    Critical Warning: From CLK (Rise) to CPU:inst13|CLK2 (Rise) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Rise) to CPU:inst13|CLK2 (Fall) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Fall) to CPU:inst13|CLK2 (Fall) (setup and hold)
+    Critical Warning: From CLK (Rise) to CPU:inst13|CLK2 (Fall) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Rise) to CLK (Rise) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Fall) to CLK (Rise) (setup and hold)
+    Critical Warning: From CLK (Rise) to CLK (Rise) (setup and hold)
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -6.326
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -6.326      -289.839 CPU:inst13|CLK2 
+    Info:    -3.850       -53.197 CLK 
+Info: Worst-case hold slack is 0.036
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.036         0.000 CLK 
+    Info:     0.402         0.000 CPU:inst13|CLK2 
+Info: No recovery paths to report
+Info: No removal paths to report
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: The Metastability Analysis global option is set to OFF.
+Info: No synchronizer chains to report.
+Info: Analyzing Fast 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning: From CPU:inst13|CLK2 (Rise) to CPU:inst13|CLK2 (Rise) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Fall) to CPU:inst13|CLK2 (Rise) (setup and hold)
+    Critical Warning: From CLK (Rise) to CPU:inst13|CLK2 (Rise) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Rise) to CPU:inst13|CLK2 (Fall) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Fall) to CPU:inst13|CLK2 (Fall) (setup and hold)
+    Critical Warning: From CLK (Rise) to CPU:inst13|CLK2 (Fall) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Rise) to CLK (Rise) (setup and hold)
+    Critical Warning: From CPU:inst13|CLK2 (Fall) to CLK (Rise) (setup and hold)
+    Critical Warning: From CLK (Rise) to CLK (Rise) (setup and hold)
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -2.613
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -2.613      -109.602 CPU:inst13|CLK2 
+    Info:    -1.627       -14.882 CLK 
+Info: Worst-case hold slack is -0.162
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.162        -0.162 CLK 
+    Info:     0.183         0.000 CPU:inst13|CLK2 
+Info: No recovery paths to report
+Info: No removal paths to report
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: The Metastability Analysis global option is set to OFF.
+Info: No synchronizer chains to report.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 297 megabytes
+    Info: Processing ended: Thu Dec 07 16:26:56 2017
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

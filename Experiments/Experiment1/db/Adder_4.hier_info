@@ -1,0 +1,151 @@
+|Full_Adder8
+S1 <= Full_Adder4:inst.S1
+B0 => Full_Adder4:inst.B0
+B1 => Full_Adder4:inst.B1
+B2 => Full_Adder4:inst.B2
+B3 => Full_Adder4:inst.B3
+A0 => Full_Adder4:inst.A0
+A1 => Full_Adder4:inst.A1
+A2 => Full_Adder4:inst.A2
+A3 => Full_Adder4:inst.A3
+C0 => Full_Adder4:inst.C0
+S0 <= Full_Adder4:inst.S0
+S3 <= Full_Adder4:inst.S3
+S2 <= Full_Adder4:inst.S2
+C7 <= Full_Adder4:inst1.CY
+B4 => Full_Adder4:inst1.B0
+B5 => Full_Adder4:inst1.B1
+B6 => Full_Adder4:inst1.B2
+B7 => Full_Adder4:inst1.B3
+A4 => Full_Adder4:inst1.A0
+A5 => Full_Adder4:inst1.A1
+A6 => Full_Adder4:inst1.A2
+A7 => Full_Adder4:inst1.A3
+S4 <= Full_Adder4:inst1.S0
+S5 <= Full_Adder4:inst1.S1
+S7 <= Full_Adder4:inst1.S3
+S6 <= Full_Adder4:inst1.S2
+
+
+|Full_Adder8|Full_Adder4:inst
+CY <= Adder_4:inst.Cout
+A3 => Adder_4:inst.Ain
+B3 => Adder_4:inst.Bin
+A2 => Adder_4:inst1.Ain
+B2 => Adder_4:inst1.Bin
+A1 => Adder_4:inst2.Ain
+B1 => Adder_4:inst2.Bin
+A0 => Adder_4:inst3.Ain
+B0 => Adder_4:inst3.Bin
+C0 => Adder_4:inst3.Cin
+S0 <= Adder_4:inst3.Sum
+S1 <= Adder_4:inst2.Sum
+S2 <= Adder_4:inst1.Sum
+S3 <= Adder_4:inst.Sum
+
+
+|Full_Adder8|Full_Adder4:inst|Adder_4:inst
+Ain => Cout~0.IN0
+Ain => Sum~0.IN0
+Bin => Cout~0.IN1
+Bin => Sum~0.IN1
+Cin => Cout~1.IN1
+Cin => Sum~1.IN1
+Sum <= Sum~1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Full_Adder8|Full_Adder4:inst|Adder_4:inst1
+Ain => Cout~0.IN0
+Ain => Sum~0.IN0
+Bin => Cout~0.IN1
+Bin => Sum~0.IN1
+Cin => Cout~1.IN1
+Cin => Sum~1.IN1
+Sum <= Sum~1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Full_Adder8|Full_Adder4:inst|Adder_4:inst2
+Ain => Cout~0.IN0
+Ain => Sum~0.IN0
+Bin => Cout~0.IN1
+Bin => Sum~0.IN1
+Cin => Cout~1.IN1
+Cin => Sum~1.IN1
+Sum <= Sum~1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Full_Adder8|Full_Adder4:inst|Adder_4:inst3
+Ain => Cout~0.IN0
+Ain => Sum~0.IN0
+Bin => Cout~0.IN1
+Bin => Sum~0.IN1
+Cin => Cout~1.IN1
+Cin => Sum~1.IN1
+Sum <= Sum~1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Full_Adder8|Full_Adder4:inst1
+CY <= Adder_4:inst.Cout
+A3 => Adder_4:inst.Ain
+B3 => Adder_4:inst.Bin
+A2 => Adder_4:inst1.Ain
+B2 => Adder_4:inst1.Bin
+A1 => Adder_4:inst2.Ain
+B1 => Adder_4:inst2.Bin
+A0 => Adder_4:inst3.Ain
+B0 => Adder_4:inst3.Bin
+C0 => Adder_4:inst3.Cin
+S0 <= Adder_4:inst3.Sum
+S1 <= Adder_4:inst2.Sum
+S2 <= Adder_4:inst1.Sum
+S3 <= Adder_4:inst.Sum
+
+
+|Full_Adder8|Full_Adder4:inst1|Adder_4:inst
+Ain => Cout~0.IN0
+Ain => Sum~0.IN0
+Bin => Cout~0.IN1
+Bin => Sum~0.IN1
+Cin => Cout~1.IN1
+Cin => Sum~1.IN1
+Sum <= Sum~1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Full_Adder8|Full_Adder4:inst1|Adder_4:inst1
+Ain => Cout~0.IN0
+Ain => Sum~0.IN0
+Bin => Cout~0.IN1
+Bin => Sum~0.IN1
+Cin => Cout~1.IN1
+Cin => Sum~1.IN1
+Sum <= Sum~1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Full_Adder8|Full_Adder4:inst1|Adder_4:inst2
+Ain => Cout~0.IN0
+Ain => Sum~0.IN0
+Bin => Cout~0.IN1
+Bin => Sum~0.IN1
+Cin => Cout~1.IN1
+Cin => Sum~1.IN1
+Sum <= Sum~1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Full_Adder8|Full_Adder4:inst1|Adder_4:inst3
+Ain => Cout~0.IN0
+Ain => Sum~0.IN0
+Bin => Cout~0.IN1
+Bin => Sum~0.IN1
+Cin => Cout~1.IN1
+Cin => Sum~1.IN1
+Sum <= Sum~1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

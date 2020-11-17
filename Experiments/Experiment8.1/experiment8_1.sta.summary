@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CPU:inst13|CLK2'
+Slack : -6.561
+TNS   : -303.391
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -4.236
+TNS   : -59.602
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.015
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CPU:inst13|CLK2'
+Slack : 0.451
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CPU:inst13|CLK2'
+Slack : -6.326
+TNS   : -289.839
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -3.850
+TNS   : -53.197
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.036
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CPU:inst13|CLK2'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CPU:inst13|CLK2'
+Slack : -2.613
+TNS   : -109.602
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -1.627
+TNS   : -14.882
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : -0.162
+TNS   : -0.162
+
+Type  : Fast 1200mV 0C Model Hold 'CPU:inst13|CLK2'
+Slack : 0.183
+TNS   : 0.000
+
+------------------------------------------------------------

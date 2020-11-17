@@ -1,0 +1,521 @@
+Classic Timing Analyzer report for CPUandROM
+Tue Nov 28 20:35:09 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLK'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                            ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------------------------------------------------+-----------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                                                                ; To                          ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------------------------------------------------+-----------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.198 ns                         ; HLinput                                                                             ; CPURegister:inst5|\P1:PC[2] ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 6.997 ns                         ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[0] ; q[0]                        ; CLK        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.071 ns                        ; addr[2]                                                                             ; CPURegister:inst5|\P1:PC[2] ; --         ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; 303.21 MHz ( period = 3.298 ns ) ; MyLED:inst3|\P1:Divider[22]                                                         ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                                                     ;                             ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------------------------------------------------+-----------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                                                                                                                                             ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                                                                 ; To                          ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 303.21 MHz ( period = 3.298 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 3.127 ns                ;
+; N/A                                     ; 305.72 MHz ( period = 3.271 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 311.53 MHz ( period = 3.210 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 3.039 ns                ;
+; N/A                                     ; 313.77 MHz ( period = 3.187 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 3.016 ns                ;
+; N/A                                     ; 315.76 MHz ( period = 3.167 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.996 ns                ;
+; N/A                                     ; 318.47 MHz ( period = 3.140 ns )                    ; MyLED:inst3|\P1:Divider[23]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.969 ns                ;
+; N/A                                     ; 319.08 MHz ( period = 3.134 ns )                    ; MyLED:inst3|\P1:Divider[19]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.963 ns                ;
+; N/A                                     ; 319.08 MHz ( period = 3.134 ns )                    ; MyLED:inst3|\P1:Divider[30]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.963 ns                ;
+; N/A                                     ; 325.95 MHz ( period = 3.068 ns )                    ; MyLED:inst3|\P1:Divider[21]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.897 ns                ;
+; N/A                                     ; 326.69 MHz ( period = 3.061 ns )                    ; MyLED:inst3|\P1:Divider[25]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.890 ns                ;
+; N/A                                     ; 328.30 MHz ( period = 3.046 ns )                    ; MyLED:inst3|\P1:Divider[7]                                                           ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.875 ns                ;
+; N/A                                     ; 329.71 MHz ( period = 3.033 ns )                    ; MyLED:inst3|\P1:Divider[12]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.862 ns                ;
+; N/A                                     ; 330.14 MHz ( period = 3.029 ns )                    ; MyLED:inst3|\P1:Divider[17]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.858 ns                ;
+; N/A                                     ; 333.67 MHz ( period = 2.997 ns )                    ; MyLED:inst3|\P1:Divider[24]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.826 ns                ;
+; N/A                                     ; 334.00 MHz ( period = 2.994 ns )                    ; MyLED:inst3|\P1:Divider[9]                                                           ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.823 ns                ;
+; N/A                                     ; 334.22 MHz ( period = 2.992 ns )                    ; MyLED:inst3|\P1:Divider[5]                                                           ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.821 ns                ;
+; N/A                                     ; 338.29 MHz ( period = 2.956 ns )                    ; MyLED:inst3|\P1:Divider[27]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.785 ns                ;
+; N/A                                     ; 339.56 MHz ( period = 2.945 ns )                    ; MyLED:inst3|\P1:Divider[31]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.774 ns                ;
+; N/A                                     ; 339.90 MHz ( period = 2.942 ns )                    ; MyLED:inst3|\P1:Divider[4]                                                           ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.771 ns                ;
+; N/A                                     ; 342.35 MHz ( period = 2.921 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|BitSelect[1]    ; CLK        ; CLK      ; None                        ; None                      ; 2.736 ns                ;
+; N/A                                     ; 342.35 MHz ( period = 2.921 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|BitSelect1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 2.736 ns                ;
+; N/A                                     ; 342.35 MHz ( period = 2.921 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|BitSelect[0]    ; CLK        ; CLK      ; None                        ; None                      ; 2.736 ns                ;
+; N/A                                     ; 342.35 MHz ( period = 2.921 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.736 ns                ;
+; N/A                                     ; 342.35 MHz ( period = 2.921 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|LED7S[5]        ; CLK        ; CLK      ; None                        ; None                      ; 2.736 ns                ;
+; N/A                                     ; 342.35 MHz ( period = 2.921 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.736 ns                ;
+; N/A                                     ; 342.35 MHz ( period = 2.921 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|LED7S[3]        ; CLK        ; CLK      ; None                        ; None                      ; 2.736 ns                ;
+; N/A                                     ; 342.35 MHz ( period = 2.921 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|LED7S[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.736 ns                ;
+; N/A                                     ; 342.35 MHz ( period = 2.921 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.736 ns                ;
+; N/A                                     ; 343.52 MHz ( period = 2.911 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[10] ; MyLED:inst3|LED7S[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.813 ns                ;
+; N/A                                     ; 344.12 MHz ( period = 2.906 ns )                    ; MyLED:inst3|\P1:Divider[8]                                                           ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.735 ns                ;
+; N/A                                     ; 344.47 MHz ( period = 2.903 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[2]  ; MyLED:inst3|LED7S[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.805 ns                ;
+; N/A                                     ; 344.59 MHz ( period = 2.902 ns )                    ; MyLED:inst3|\P1:Divider[10]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.731 ns                ;
+; N/A                                     ; 345.54 MHz ( period = 2.894 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|BitSelect[1]    ; CLK        ; CLK      ; None                        ; None                      ; 2.709 ns                ;
+; N/A                                     ; 345.54 MHz ( period = 2.894 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|BitSelect1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 2.709 ns                ;
+; N/A                                     ; 345.54 MHz ( period = 2.894 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|BitSelect[0]    ; CLK        ; CLK      ; None                        ; None                      ; 2.709 ns                ;
+; N/A                                     ; 345.54 MHz ( period = 2.894 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.709 ns                ;
+; N/A                                     ; 345.54 MHz ( period = 2.894 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|LED7S[5]        ; CLK        ; CLK      ; None                        ; None                      ; 2.709 ns                ;
+; N/A                                     ; 345.54 MHz ( period = 2.894 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.709 ns                ;
+; N/A                                     ; 345.54 MHz ( period = 2.894 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|LED7S[3]        ; CLK        ; CLK      ; None                        ; None                      ; 2.709 ns                ;
+; N/A                                     ; 345.54 MHz ( period = 2.894 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|LED7S[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.709 ns                ;
+; N/A                                     ; 345.54 MHz ( period = 2.894 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.709 ns                ;
+; N/A                                     ; 347.22 MHz ( period = 2.880 ns )                    ; MyLED:inst3|\P1:Divider[20]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.709 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[28] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[19] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[24] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[20] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[22] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[29] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[25] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[30] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[21] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[23] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[17] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[31] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[26] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[27] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[18] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; MyLED:inst3|\P1:Divider[22]                                                          ; MyLED:inst3|\P1:Divider[16] ; CLK        ; CLK      ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 349.04 MHz ( period = 2.865 ns )                    ; MyLED:inst3|\P1:Divider[0]                                                           ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.694 ns                ;
+; N/A                                     ; 350.88 MHz ( period = 2.850 ns )                    ; MyLED:inst3|\P1:Divider[16]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.679 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[28] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[19] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[24] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[20] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[22] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[29] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[25] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[30] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[21] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[23] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[17] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[31] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[26] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[27] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[18] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; MyLED:inst3|\P1:Divider[28]                                                          ; MyLED:inst3|\P1:Divider[16] ; CLK        ; CLK      ; None                        ; None                      ; 2.665 ns                ;
+; N/A                                     ; 352.36 MHz ( period = 2.838 ns )                    ; MyLED:inst3|\P1:Divider[18]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.667 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|BitSelect[1]    ; CLK        ; CLK      ; None                        ; None                      ; 2.648 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|BitSelect1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 2.648 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|BitSelect[0]    ; CLK        ; CLK      ; None                        ; None                      ; 2.648 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.648 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|LED7S[5]        ; CLK        ; CLK      ; None                        ; None                      ; 2.648 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.648 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|LED7S[3]        ; CLK        ; CLK      ; None                        ; None                      ; 2.648 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|LED7S[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.648 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.648 ns                ;
+; N/A                                     ; 355.37 MHz ( period = 2.814 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[9]  ; MyLED:inst3|LED7S[5]        ; CLK        ; CLK      ; None                        ; None                      ; 2.716 ns                ;
+; N/A                                     ; 355.37 MHz ( period = 2.814 ns )                    ; MyLED:inst3|\P1:Divider[11]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.643 ns                ;
+; N/A                                     ; 355.87 MHz ( period = 2.810 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|BitSelect[1]    ; CLK        ; CLK      ; None                        ; None                      ; 2.625 ns                ;
+; N/A                                     ; 355.87 MHz ( period = 2.810 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|BitSelect1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 2.625 ns                ;
+; N/A                                     ; 355.87 MHz ( period = 2.810 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|BitSelect[0]    ; CLK        ; CLK      ; None                        ; None                      ; 2.625 ns                ;
+; N/A                                     ; 355.87 MHz ( period = 2.810 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.625 ns                ;
+; N/A                                     ; 355.87 MHz ( period = 2.810 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|LED7S[5]        ; CLK        ; CLK      ; None                        ; None                      ; 2.625 ns                ;
+; N/A                                     ; 355.87 MHz ( period = 2.810 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.625 ns                ;
+; N/A                                     ; 355.87 MHz ( period = 2.810 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|LED7S[3]        ; CLK        ; CLK      ; None                        ; None                      ; 2.625 ns                ;
+; N/A                                     ; 355.87 MHz ( period = 2.810 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|LED7S[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.625 ns                ;
+; N/A                                     ; 355.87 MHz ( period = 2.810 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.625 ns                ;
+; N/A                                     ; 356.38 MHz ( period = 2.806 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[9]  ; MyLED:inst3|LED7S[3]        ; CLK        ; CLK      ; None                        ; None                      ; 2.708 ns                ;
+; N/A                                     ; 358.42 MHz ( period = 2.790 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|BitSelect[1]    ; CLK        ; CLK      ; None                        ; None                      ; 2.605 ns                ;
+; N/A                                     ; 358.42 MHz ( period = 2.790 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|BitSelect1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 2.605 ns                ;
+; N/A                                     ; 358.42 MHz ( period = 2.790 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|BitSelect[0]    ; CLK        ; CLK      ; None                        ; None                      ; 2.605 ns                ;
+; N/A                                     ; 358.42 MHz ( period = 2.790 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.605 ns                ;
+; N/A                                     ; 358.42 MHz ( period = 2.790 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|LED7S[5]        ; CLK        ; CLK      ; None                        ; None                      ; 2.605 ns                ;
+; N/A                                     ; 358.42 MHz ( period = 2.790 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.605 ns                ;
+; N/A                                     ; 358.42 MHz ( period = 2.790 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|LED7S[3]        ; CLK        ; CLK      ; None                        ; None                      ; 2.605 ns                ;
+; N/A                                     ; 358.42 MHz ( period = 2.790 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|LED7S[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.605 ns                ;
+; N/A                                     ; 358.42 MHz ( period = 2.790 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.605 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[28] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[19] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[24] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[20] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[22] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[29] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[25] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[30] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[21] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[23] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[17] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[31] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[26] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[27] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[18] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 358.68 MHz ( period = 2.788 ns )                    ; MyLED:inst3|\P1:Divider[29]                                                          ; MyLED:inst3|\P1:Divider[16] ; CLK        ; CLK      ; None                        ; None                      ; 2.604 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[28] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[19] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[24] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[20] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[22] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[29] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[25] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[30] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[21] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[23] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[17] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[31] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[26] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[27] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[18] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.66 MHz ( period = 2.765 ns )                    ; MyLED:inst3|\P1:Divider[13]                                                          ; MyLED:inst3|\P1:Divider[16] ; CLK        ; CLK      ; None                        ; None                      ; 2.581 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; MyLED:inst3|\P1:Divider[23]                                                          ; MyLED:inst3|BitSelect[1]    ; CLK        ; CLK      ; None                        ; None                      ; 2.578 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; MyLED:inst3|\P1:Divider[23]                                                          ; MyLED:inst3|BitSelect1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 2.578 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; MyLED:inst3|\P1:Divider[23]                                                          ; MyLED:inst3|BitSelect[0]    ; CLK        ; CLK      ; None                        ; None                      ; 2.578 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; MyLED:inst3|\P1:Divider[23]                                                          ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.578 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; MyLED:inst3|\P1:Divider[23]                                                          ; MyLED:inst3|LED7S[5]        ; CLK        ; CLK      ; None                        ; None                      ; 2.578 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; MyLED:inst3|\P1:Divider[23]                                                          ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.578 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; MyLED:inst3|\P1:Divider[23]                                                          ; MyLED:inst3|LED7S[3]        ; CLK        ; CLK      ; None                        ; None                      ; 2.578 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; MyLED:inst3|\P1:Divider[23]                                                          ; MyLED:inst3|LED7S[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.578 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; MyLED:inst3|\P1:Divider[23]                                                          ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.578 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[19]                                                          ; MyLED:inst3|BitSelect[1]    ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[30]                                                          ; MyLED:inst3|BitSelect[1]    ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[19]                                                          ; MyLED:inst3|BitSelect1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[30]                                                          ; MyLED:inst3|BitSelect1[0]   ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[19]                                                          ; MyLED:inst3|BitSelect[0]    ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[30]                                                          ; MyLED:inst3|BitSelect[0]    ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[19]                                                          ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[30]                                                          ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[19]                                                          ; MyLED:inst3|LED7S[5]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[30]                                                          ; MyLED:inst3|LED7S[5]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[19]                                                          ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[30]                                                          ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[19]                                                          ; MyLED:inst3|LED7S[3]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[30]                                                          ; MyLED:inst3|LED7S[3]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[19]                                                          ; MyLED:inst3|LED7S[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[30]                                                          ; MyLED:inst3|LED7S[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[19]                                                          ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; MyLED:inst3|\P1:Divider[30]                                                          ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.572 ns                ;
+; N/A                                     ; 362.98 MHz ( period = 2.755 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[8]  ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.657 ns                ;
+; N/A                                     ; 363.37 MHz ( period = 2.752 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[10] ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.654 ns                ;
+; N/A                                     ; 363.50 MHz ( period = 2.751 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[8]  ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.653 ns                ;
+; N/A                                     ; 363.50 MHz ( period = 2.751 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[8]  ; MyLED:inst3|LED7S[5]        ; CLK        ; CLK      ; None                        ; None                      ; 2.653 ns                ;
+; N/A                                     ; 363.64 MHz ( period = 2.750 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[10] ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.652 ns                ;
+; N/A                                     ; 364.17 MHz ( period = 2.746 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[5]  ; MyLED:inst3|LED7S[5]        ; CLK        ; CLK      ; None                        ; None                      ; 2.648 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[28] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[19] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[24] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[20] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[22] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[29] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[25] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[30] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[21] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[23] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[17] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[31] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[26] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[27] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[18] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.30 MHz ( period = 2.745 ns )                    ; MyLED:inst3|\P1:Divider[26]                                                          ; MyLED:inst3|\P1:Divider[16] ; CLK        ; CLK      ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 364.43 MHz ( period = 2.744 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[10] ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.646 ns                ;
+; N/A                                     ; 364.43 MHz ( period = 2.744 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[2]  ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.646 ns                ;
+; N/A                                     ; 364.56 MHz ( period = 2.743 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[8]  ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.645 ns                ;
+; N/A                                     ; 364.56 MHz ( period = 2.743 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[8]  ; MyLED:inst3|LED7S[3]        ; CLK        ; CLK      ; None                        ; None                      ; 2.645 ns                ;
+; N/A                                     ; 364.70 MHz ( period = 2.742 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[2]  ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.644 ns                ;
+; N/A                                     ; 365.10 MHz ( period = 2.739 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[9]  ; MyLED:inst3|LED7S[6]        ; CLK        ; CLK      ; None                        ; None                      ; 2.641 ns                ;
+; N/A                                     ; 365.10 MHz ( period = 2.739 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[9]  ; MyLED:inst3|LED7S[1]        ; CLK        ; CLK      ; None                        ; None                      ; 2.641 ns                ;
+; N/A                                     ; 365.23 MHz ( period = 2.738 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[5]  ; MyLED:inst3|LED7S[3]        ; CLK        ; CLK      ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 365.23 MHz ( period = 2.738 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[9]  ; MyLED:inst3|LED7S[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 365.23 MHz ( period = 2.738 ns )                    ; MyLED:inst3|\P1:Divider[14]                                                          ; MyLED:inst3|LED7S[0]        ; CLK        ; CLK      ; None                        ; None                      ; 2.567 ns                ;
+; N/A                                     ; 365.50 MHz ( period = 2.736 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[2]  ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.638 ns                ;
+; N/A                                     ; 365.50 MHz ( period = 2.736 ns )                    ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[9]  ; MyLED:inst3|LED7S[4]        ; CLK        ; CLK      ; None                        ; None                      ; 2.638 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                                                      ;                             ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; tsu                                                                                  ;
++-------+--------------+------------+---------+-----------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                          ; To Clock ;
++-------+--------------+------------+---------+-----------------------------+----------+
+; N/A   ; None         ; 4.198 ns   ; HLinput ; CPURegister:inst5|\P1:PC[0] ; CLK      ;
+; N/A   ; None         ; 4.198 ns   ; HLinput ; CPURegister:inst5|\P1:PC[1] ; CLK      ;
+; N/A   ; None         ; 4.198 ns   ; HLinput ; CPURegister:inst5|\P1:PC[2] ; CLK      ;
+; N/A   ; None         ; 4.152 ns   ; HLinput ; CPURegister:inst5|\P1:PC[7] ; CLK      ;
+; N/A   ; None         ; 4.152 ns   ; HLinput ; CPURegister:inst5|\P1:PC[6] ; CLK      ;
+; N/A   ; None         ; 4.152 ns   ; HLinput ; CPURegister:inst5|\P1:PC[5] ; CLK      ;
+; N/A   ; None         ; 4.152 ns   ; HLinput ; CPURegister:inst5|\P1:PC[4] ; CLK      ;
+; N/A   ; None         ; 3.520 ns   ; M[1]    ; CPURegister:inst5|\P1:PC[7] ; CLK      ;
+; N/A   ; None         ; 3.520 ns   ; M[1]    ; CPURegister:inst5|\P1:PC[6] ; CLK      ;
+; N/A   ; None         ; 3.520 ns   ; M[1]    ; CPURegister:inst5|\P1:PC[5] ; CLK      ;
+; N/A   ; None         ; 3.520 ns   ; M[1]    ; CPURegister:inst5|\P1:PC[4] ; CLK      ;
+; N/A   ; None         ; 3.515 ns   ; M[1]    ; CPURegister:inst5|\P1:PC[0] ; CLK      ;
+; N/A   ; None         ; 3.515 ns   ; M[1]    ; CPURegister:inst5|\P1:PC[1] ; CLK      ;
+; N/A   ; None         ; 3.515 ns   ; M[1]    ; CPURegister:inst5|\P1:PC[2] ; CLK      ;
+; N/A   ; None         ; 3.429 ns   ; HLinput ; CPURegister:inst5|\P1:PC[3] ; CLK      ;
+; N/A   ; None         ; 3.257 ns   ; M[0]    ; CPURegister:inst5|\P1:PC[7] ; CLK      ;
+; N/A   ; None         ; 3.257 ns   ; M[0]    ; CPURegister:inst5|\P1:PC[6] ; CLK      ;
+; N/A   ; None         ; 3.257 ns   ; M[0]    ; CPURegister:inst5|\P1:PC[5] ; CLK      ;
+; N/A   ; None         ; 3.257 ns   ; M[0]    ; CPURegister:inst5|\P1:PC[4] ; CLK      ;
+; N/A   ; None         ; 3.255 ns   ; M[0]    ; CPURegister:inst5|\P1:PC[0] ; CLK      ;
+; N/A   ; None         ; 3.255 ns   ; M[0]    ; CPURegister:inst5|\P1:PC[1] ; CLK      ;
+; N/A   ; None         ; 3.255 ns   ; M[0]    ; CPURegister:inst5|\P1:PC[2] ; CLK      ;
+; N/A   ; None         ; 3.158 ns   ; addr[0] ; CPURegister:inst5|\P1:PC[4] ; CLK      ;
+; N/A   ; None         ; 3.052 ns   ; addr[0] ; CPURegister:inst5|\P1:PC[0] ; CLK      ;
+; N/A   ; None         ; 2.629 ns   ; M[1]    ; CPURegister:inst5|\P1:PC[3] ; CLK      ;
+; N/A   ; None         ; 2.588 ns   ; addr[3] ; CPURegister:inst5|\P1:PC[3] ; CLK      ;
+; N/A   ; None         ; 2.464 ns   ; M[0]    ; CPURegister:inst5|\P1:PC[3] ; CLK      ;
+; N/A   ; None         ; 2.422 ns   ; addr[1] ; CPURegister:inst5|\P1:PC[5] ; CLK      ;
+; N/A   ; None         ; 2.406 ns   ; addr[2] ; CPURegister:inst5|\P1:PC[6] ; CLK      ;
+; N/A   ; None         ; 2.340 ns   ; addr[3] ; CPURegister:inst5|\P1:PC[7] ; CLK      ;
+; N/A   ; None         ; 2.316 ns   ; addr[1] ; CPURegister:inst5|\P1:PC[1] ; CLK      ;
+; N/A   ; None         ; 2.310 ns   ; addr[2] ; CPURegister:inst5|\P1:PC[2] ; CLK      ;
++-------+--------------+------------+---------+-----------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                   ;
++-------+--------------+------------+--------------------------------------------------------------------------------------+---------------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                                 ; To            ; From Clock ;
++-------+--------------+------------+--------------------------------------------------------------------------------------+---------------+------------+
+; N/A   ; None         ; 6.997 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[0]  ; q[0]          ; CLK        ;
+; N/A   ; None         ; 6.803 ns   ; CPURegister:inst5|\P1:PC[6]                                                          ; OutputAddr[6] ; CLK        ;
+; N/A   ; None         ; 6.739 ns   ; MyLED:inst3|LED7S[0]                                                                 ; LED7S[0]      ; CLK        ;
+; N/A   ; None         ; 6.353 ns   ; MyLED:inst3|LED7S[5]                                                                 ; LED7S[5]      ; CLK        ;
+; N/A   ; None         ; 6.275 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[1]  ; q[1]          ; CLK        ;
+; N/A   ; None         ; 5.799 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[3]  ; q[3]          ; CLK        ;
+; N/A   ; None         ; 5.789 ns   ; MyLED:inst3|LED7S[4]                                                                 ; LED7S[4]      ; CLK        ;
+; N/A   ; None         ; 5.697 ns   ; MyLED:inst3|LED7S[1]                                                                 ; LED7S[1]      ; CLK        ;
+; N/A   ; None         ; 5.646 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[6]  ; q[6]          ; CLK        ;
+; N/A   ; None         ; 5.620 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[9]  ; q[9]          ; CLK        ;
+; N/A   ; None         ; 5.617 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[11] ; q[11]         ; CLK        ;
+; N/A   ; None         ; 5.566 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[10] ; q[10]         ; CLK        ;
+; N/A   ; None         ; 5.487 ns   ; MyLED:inst3|BitSelect[0]                                                             ; BitSelect[0]  ; CLK        ;
+; N/A   ; None         ; 5.481 ns   ; MyLED:inst3|LED7S[6]                                                                 ; LED7S[6]      ; CLK        ;
+; N/A   ; None         ; 5.476 ns   ; MyLED:inst3|LED7S[3]                                                                 ; LED7S[3]      ; CLK        ;
+; N/A   ; None         ; 5.472 ns   ; MyLED:inst3|BitSelect[1]                                                             ; BitSelect[1]  ; CLK        ;
+; N/A   ; None         ; 5.454 ns   ; MyLED:inst3|LED7S[2]                                                                 ; LED7S[2]      ; CLK        ;
+; N/A   ; None         ; 5.428 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[5]  ; q[5]          ; CLK        ;
+; N/A   ; None         ; 5.357 ns   ; CPURegister:inst5|\P1:PC[1]                                                          ; OutputAddr[1] ; CLK        ;
+; N/A   ; None         ; 5.336 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[8]  ; q[8]          ; CLK        ;
+; N/A   ; None         ; 5.324 ns   ; CPURegister:inst5|\P1:PC[5]                                                          ; OutputAddr[5] ; CLK        ;
+; N/A   ; None         ; 5.317 ns   ; CPURegister:inst5|\P1:PC[3]                                                          ; OutputAddr[3] ; CLK        ;
+; N/A   ; None         ; 5.305 ns   ; CPURegister:inst5|\P1:PC[2]                                                          ; OutputAddr[2] ; CLK        ;
+; N/A   ; None         ; 5.304 ns   ; CPURegister:inst5|\P1:PC[7]                                                          ; OutputAddr[7] ; CLK        ;
+; N/A   ; None         ; 5.303 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[12] ; q[12]         ; CLK        ;
+; N/A   ; None         ; 5.297 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[13] ; q[13]         ; CLK        ;
+; N/A   ; None         ; 5.266 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[4]  ; q[4]          ; CLK        ;
+; N/A   ; None         ; 5.264 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[15] ; q[15]         ; CLK        ;
+; N/A   ; None         ; 5.187 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[2]  ; q[2]          ; CLK        ;
+; N/A   ; None         ; 5.081 ns   ; CPURegister:inst5|\P1:PC[0]                                                          ; OutputAddr[0] ; CLK        ;
+; N/A   ; None         ; 5.059 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[7]  ; q[7]          ; CLK        ;
+; N/A   ; None         ; 5.051 ns   ; CPURegister:inst5|\P1:PC[4]                                                          ; OutputAddr[4] ; CLK        ;
+; N/A   ; None         ; 4.994 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[14] ; q[14]         ; CLK        ;
++-------+--------------+------------+--------------------------------------------------------------------------------------+---------------+------------+
+
+
++--------------------------------------------------------------------------------------------+
+; th                                                                                         ;
++---------------+-------------+-----------+---------+-----------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                          ; To Clock ;
++---------------+-------------+-----------+---------+-----------------------------+----------+
+; N/A           ; None        ; -2.071 ns ; addr[2] ; CPURegister:inst5|\P1:PC[2] ; CLK      ;
+; N/A           ; None        ; -2.077 ns ; addr[1] ; CPURegister:inst5|\P1:PC[1] ; CLK      ;
+; N/A           ; None        ; -2.101 ns ; addr[3] ; CPURegister:inst5|\P1:PC[7] ; CLK      ;
+; N/A           ; None        ; -2.167 ns ; addr[2] ; CPURegister:inst5|\P1:PC[6] ; CLK      ;
+; N/A           ; None        ; -2.183 ns ; addr[1] ; CPURegister:inst5|\P1:PC[5] ; CLK      ;
+; N/A           ; None        ; -2.225 ns ; M[0]    ; CPURegister:inst5|\P1:PC[3] ; CLK      ;
+; N/A           ; None        ; -2.258 ns ; M[0]    ; CPURegister:inst5|\P1:PC[7] ; CLK      ;
+; N/A           ; None        ; -2.259 ns ; M[0]    ; CPURegister:inst5|\P1:PC[5] ; CLK      ;
+; N/A           ; None        ; -2.329 ns ; M[0]    ; CPURegister:inst5|\P1:PC[6] ; CLK      ;
+; N/A           ; None        ; -2.349 ns ; addr[3] ; CPURegister:inst5|\P1:PC[3] ; CLK      ;
+; N/A           ; None        ; -2.390 ns ; M[1]    ; CPURegister:inst5|\P1:PC[3] ; CLK      ;
+; N/A           ; None        ; -2.412 ns ; M[0]    ; CPURegister:inst5|\P1:PC[4] ; CLK      ;
+; N/A           ; None        ; -2.553 ns ; M[1]    ; CPURegister:inst5|\P1:PC[4] ; CLK      ;
+; N/A           ; None        ; -2.623 ns ; M[1]    ; CPURegister:inst5|\P1:PC[5] ; CLK      ;
+; N/A           ; None        ; -2.658 ns ; M[1]    ; CPURegister:inst5|\P1:PC[6] ; CLK      ;
+; N/A           ; None        ; -2.666 ns ; M[1]    ; CPURegister:inst5|\P1:PC[7] ; CLK      ;
+; N/A           ; None        ; -2.813 ns ; addr[0] ; CPURegister:inst5|\P1:PC[0] ; CLK      ;
+; N/A           ; None        ; -2.919 ns ; addr[0] ; CPURegister:inst5|\P1:PC[4] ; CLK      ;
+; N/A           ; None        ; -3.016 ns ; M[0]    ; CPURegister:inst5|\P1:PC[0] ; CLK      ;
+; N/A           ; None        ; -3.016 ns ; M[0]    ; CPURegister:inst5|\P1:PC[1] ; CLK      ;
+; N/A           ; None        ; -3.016 ns ; M[0]    ; CPURegister:inst5|\P1:PC[2] ; CLK      ;
+; N/A           ; None        ; -3.190 ns ; HLinput ; CPURegister:inst5|\P1:PC[3] ; CLK      ;
+; N/A           ; None        ; -3.276 ns ; M[1]    ; CPURegister:inst5|\P1:PC[0] ; CLK      ;
+; N/A           ; None        ; -3.276 ns ; M[1]    ; CPURegister:inst5|\P1:PC[1] ; CLK      ;
+; N/A           ; None        ; -3.276 ns ; M[1]    ; CPURegister:inst5|\P1:PC[2] ; CLK      ;
+; N/A           ; None        ; -3.913 ns ; HLinput ; CPURegister:inst5|\P1:PC[7] ; CLK      ;
+; N/A           ; None        ; -3.913 ns ; HLinput ; CPURegister:inst5|\P1:PC[6] ; CLK      ;
+; N/A           ; None        ; -3.913 ns ; HLinput ; CPURegister:inst5|\P1:PC[5] ; CLK      ;
+; N/A           ; None        ; -3.913 ns ; HLinput ; CPURegister:inst5|\P1:PC[4] ; CLK      ;
+; N/A           ; None        ; -3.959 ns ; HLinput ; CPURegister:inst5|\P1:PC[0] ; CLK      ;
+; N/A           ; None        ; -3.959 ns ; HLinput ; CPURegister:inst5|\P1:PC[1] ; CLK      ;
+; N/A           ; None        ; -3.959 ns ; HLinput ; CPURegister:inst5|\P1:PC[2] ; CLK      ;
++---------------+-------------+-----------+---------+-----------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Tue Nov 28 20:35:09 2017
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off CPUandROM -c CPUandROM --timing_analysis_only
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK" is an undefined clock
+Info: Clock "CLK" has Internal fmax of 303.21 MHz between source register "MyLED:inst3|\P1:Divider[22]" and destination register "MyLED:inst3|LED7S[0]" (period= 3.298 ns)
+    Info: + Longest register to register delay is 3.127 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X26_Y19_N13; Fanout = 3; REG Node = 'MyLED:inst3|\P1:Divider[22]'
+        Info: 2: + IC(0.623 ns) + CELL(0.357 ns) = 0.980 ns; Loc. = LCCOMB_X26_Y21_N0; Fanout = 1; COMB Node = 'MyLED:inst3|Equal0~1'
+        Info: 3: + IC(0.553 ns) + CELL(0.225 ns) = 1.758 ns; Loc. = LCCOMB_X25_Y20_N14; Fanout = 43; COMB Node = 'MyLED:inst3|Equal0~5'
+        Info: 4: + IC(0.623 ns) + CELL(0.746 ns) = 3.127 ns; Loc. = LCFF_X26_Y23_N1; Fanout = 1; REG Node = 'MyLED:inst3|LED7S[0]'
+        Info: Total cell delay = 1.328 ns ( 42.47 % )
+        Info: Total interconnect delay = 1.799 ns ( 57.53 % )
+    Info: - Smallest clock skew is 0.013 ns
+        Info: + Shortest clock path from clock "CLK" to destination register is 2.492 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 75; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(0.677 ns) + CELL(0.618 ns) = 2.492 ns; Loc. = LCFF_X26_Y23_N1; Fanout = 1; REG Node = 'MyLED:inst3|LED7S[0]'
+            Info: Total cell delay = 1.472 ns ( 59.07 % )
+            Info: Total interconnect delay = 1.020 ns ( 40.93 % )
+        Info: - Longest clock path from clock "CLK" to source register is 2.479 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 75; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(0.664 ns) + CELL(0.618 ns) = 2.479 ns; Loc. = LCFF_X26_Y19_N13; Fanout = 3; REG Node = 'MyLED:inst3|\P1:Divider[22]'
+            Info: Total cell delay = 1.472 ns ( 59.38 % )
+            Info: Total interconnect delay = 1.007 ns ( 40.62 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Micro setup delay of destination is 0.090 ns
+Info: tsu for register "CPURegister:inst5|\P1:PC[0]" (data pin = "HLinput", clock pin = "CLK") is 4.198 ns
+    Info: + Longest pin to register delay is 6.609 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_Y3; Fanout = 3; PIN Node = 'HLinput'
+        Info: 2: + IC(4.560 ns) + CELL(0.228 ns) = 5.645 ns; Loc. = LCCOMB_X39_Y24_N16; Fanout = 3; COMB Node = 'CPURegister:inst5|\P1:PC[0]~0'
+        Info: 3: + IC(0.218 ns) + CELL(0.746 ns) = 6.609 ns; Loc. = LCFF_X39_Y24_N27; Fanout = 2; REG Node = 'CPURegister:inst5|\P1:PC[0]'
+        Info: Total cell delay = 1.831 ns ( 27.70 % )
+        Info: Total interconnect delay = 4.778 ns ( 72.30 % )
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: - Shortest clock path from clock "CLK" to destination register is 2.501 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 75; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.686 ns) + CELL(0.618 ns) = 2.501 ns; Loc. = LCFF_X39_Y24_N27; Fanout = 2; REG Node = 'CPURegister:inst5|\P1:PC[0]'
+        Info: Total cell delay = 1.472 ns ( 58.86 % )
+        Info: Total interconnect delay = 1.029 ns ( 41.14 % )
+Info: tco from clock "CLK" to destination pin "q[0]" through memory "lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[0]" is 6.997 ns
+    Info: + Longest clock path from clock "CLK" to source memory is 2.350 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 75; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.681 ns) + CELL(0.472 ns) = 2.350 ns; Loc. = M4K_X32_Y24; Fanout = 2; MEM Node = 'lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[0]'
+        Info: Total cell delay = 1.326 ns ( 56.43 % )
+        Info: Total interconnect delay = 1.024 ns ( 43.57 % )
+    Info: + Micro clock to output delay of source is 0.136 ns
+    Info: + Longest memory to pin delay is 4.511 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.051 ns) = 0.051 ns; Loc. = M4K_X32_Y24; Fanout = 2; MEM Node = 'lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sg61:auto_generated|q_a[0]'
+        Info: 2: + IC(2.336 ns) + CELL(2.124 ns) = 4.511 ns; Loc. = PIN_H18; Fanout = 0; PIN Node = 'q[0]'
+        Info: Total cell delay = 2.175 ns ( 48.22 % )
+        Info: Total interconnect delay = 2.336 ns ( 51.78 % )
+Info: th for register "CPURegister:inst5|\P1:PC[2]" (data pin = "addr[2]", clock pin = "CLK") is -2.071 ns
+    Info: + Longest clock path from clock "CLK" to destination register is 2.501 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 75; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.686 ns) + CELL(0.618 ns) = 2.501 ns; Loc. = LCFF_X39_Y24_N19; Fanout = 2; REG Node = 'CPURegister:inst5|\P1:PC[2]'
+        Info: Total cell delay = 1.472 ns ( 58.86 % )
+        Info: Total interconnect delay = 1.029 ns ( 41.14 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 4.721 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.830 ns) = 0.830 ns; Loc. = PIN_D1; Fanout = 2; PIN Node = 'addr[2]'
+        Info: 2: + IC(3.683 ns) + CELL(0.053 ns) = 4.566 ns; Loc. = LCCOMB_X39_Y24_N18; Fanout = 1; COMB Node = 'CPURegister:inst5|\P1:PC[2]~feeder'
+        Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 4.721 ns; Loc. = LCFF_X39_Y24_N19; Fanout = 2; REG Node = 'CPURegister:inst5|\P1:PC[2]'
+        Info: Total cell delay = 1.038 ns ( 21.99 % )
+        Info: Total interconnect delay = 3.683 ns ( 78.01 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 210 megabytes
+    Info: Processing ended: Tue Nov 28 20:35:09 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
